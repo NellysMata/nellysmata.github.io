@@ -171,7 +171,7 @@ if (cvButton && dogDelivery && thankYouMessage) {
 }
 //=========DESCARGAR CV====================/
 function downloadCV() {
-    const cvUrl = 'cv_nellys_mata.pdf';
+    const cvUrl = 'pdf/cv_nellys_mata.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = 'cv_nellys_mata.pdf';
