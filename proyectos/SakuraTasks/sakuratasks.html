@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Tasks - Tu lista de tareas</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <!-- Flores decorativas de fondo -->
+    <div class="bg-flower">🌸</div>
+    <div class="bg-flower">🌸</div>
+    <div class="bg-flower">🌸</div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🌸 Sakura Tasks</h1>
+            <p>Organiza tu día con estilo</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completadas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pendientes</div>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" class="task-input" id="taskInput" placeholder="¿Qué necesitas hacer hoy? ✨"
+                    maxlength="100">
+                <button class="add-btn" id="addBtn">
+                    ➕ Añadir
+                </button>
+            </div>
+            <div class="priority-selector">
+                <button class="priority-btn active" data-priority="low">📗 Baja</button>
+                <button class="priority-btn" data-priority="medium">📙 Media</button>
+                <button class="priority-btn" data-priority="high">📕 Alta</button>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendientes</button>
+            <button class="filter-btn" data-filter="completed">Completadas</button>
+        </div>
+
+        <!-- Tasks Container -->
+        <div class="tasks-container" id="tasksContainer">
+            <!-- Tasks will be rendered here -->
+        </div>
+
+        <!-- Clear completed -->
+        <div class="clear-completed">
+            <button class="clear-btn" id="clearCompleted">🗑️ Limpiar completadas</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

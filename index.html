@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Desarrolladora Web</title>
+    <link rel="stylesheet" href="/estilos/style.css" />
+    <link rel="shortcut icon" href="img/sakura.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navegación -->
+    <nav>
+        <div class="logo">
+            <div class="sakura sakura-logo">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="center"></div>
+            </div>
+            <span>{Nellys}</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Mis proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <!-- Menú hamburguesa -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+
+        <div class="menu menu-fullscreen">
+            <div class="menu-inner">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Mis proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="inicio">
+        <div class="wave"></div>
+        <div class="wave"></div>
+
+        <div class="hero-content">
+            <h1>Hola, soy <span class="highlight">Nellys Mata</span></h1>
+            <div class="cv-button-container">
+                <a href="#contacto" class="cta-button">¿Hablamos?</a>
+                <!-- Botón de CV con perrito -->
+                <button class="cv-button" id="cvButton">
+                    <span>📄</span>
+                    <span>¡Píde mi CV al perrito!</span>
+                </button>
+            </div>
+            <!-- Perrito delivery (oculto inicialmente) -->
+            <div class="dog-delivery" id="dogDelivery" style="display: none;">
+                <div class="dog">
+                    <div class="dog-ear left"></div>
+                    <div class="dog-ear right"></div>
+                    <div class="dog-head">
+                        <div class="dog-spot"></div>
+                        <div class="dog-eye left"></div>
+                        <div class="dog-eye right"></div>
+                        <div class="dog-snout">
+                            <div class="dog-nose"></div>
+                            <div class="dog-mouth"></div>
+                        </div>
+                    </div>
+                    <div class="dog-body">
+                        <div class="dog-body-spot"></div>
+                    </div>
+                    <div class="dog-paw">
+                        <div class="dog-paw-pad"></div>
+                    </div>
+                    <div class="dog-back-paw left"></div>
+                    <div class="dog-back-paw right"></div>
+                    <div class="dog-tail"></div>
+                    <!-- CV en la boca -->
+                    <div class="cv-paper"></div>
+                </div>
+            </div>
+            <!-- Mensaje de agradecimiento -->
+            <div class="thank-you-message" id="thankYouMessage">
+                <h3>¡Gracias por tu interés! 🐾</h3>
+                <p>El CV se está descargando...</p>
+                <button onclick="closeThankYouMessage()">Cerrar</button>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi">
+        <h2 class="section-title reveal">Sobre mí</h2>
+        <div class="about-content">
+            <div class="about-text reveal">
+                <p>
+                    Soy <strong>Desarrolladora de Aplicaciones Web (DAW)</strong> con una pasión genuina
+                    por crear experiencias digitales que marquen la diferencia.
+                </p>
+                <p>
+                    Mi viaje en el desarrollo comenzó con un <strong>bootcamp de desarrollo web</strong>, donde
+                    descubrí mi amor por el código y el diseño. Desde entonces, he estado perfeccionando mis
+                    habilidades en tecnologías como HTML, CSS, JavaScript, Java, PHP y más.
+                </p>
+                <p>
+                    Cuando no estoy programando, me encontrarás explorando la cultura asiática, disfrutando del
+                    anime, o buscando inspiración entre la playa y la montaña. Creo que la creatividad y la
+                    naturaleza son esenciales para crear código con alma.
+                </p>
+                <p>
+                    <strong>Busco mi primera oportunidad profesional</strong> donde pueda aportar mi entusiasmo,
+                    ganas de aprender y la perspectiva fresca que una persona comprometida como yo puede ofrecer.
+                </p>
+            </div>
+            <div class="about-image reveal">
+                <div class="about-image-container">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Proyectos -->
+    <section id="proyectos">
+        <h2 class="section-title reveal">Mis proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-image">🌸</div>
+                <div class="project-content">
+                    <h3>Sakura Tasks </h3>
+                    <p>He creado una aplicación web para gestión de tareas con un diseño minimalista
+                        inspirado en el estilo de mi portfolio. Incluye prioridades,
+                        filtros y persistencia de datos.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Ver código →</a>
+                        <a href="/proyectos/SakuraTasks/sakuratasks.html" target="_blank" class="project-link">Ver→</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">🎨</div>
+                <div class="project-content">
+                    <h3>Sakura clima</h3>
+                    <p>He desarrollado una aplicación web para controlar el clima, está conectada con una API del clima,
+                        tiene un diseño minimalista siguiendo con el estilo de mi portfolio. .</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Ver código →</a>
+                        <a href="/proyectos/Sakuraclima/index.html" class="project-link">Ver demo →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">🚀</div>
+                <div class="project-content">
+                    <h3>Sakura Calculadora</h3>
+                    <p>Sakura Calculadora** es una calculadora web con una estética inspirada en la **flor de cerezo
+                        (Sakura)</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Ver código →</a>
+                        <a href="/proyectos/Sakura Calculadora/index.html" class="project-link">Ver demo →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-card reveal coming-soon-card">
+            <div class="project-image">🚧</div>
+            <div class="project-content">
+                <h3>Proyectos en Desarrollo</h3>
+                <p>
+                    Actualmente estoy trabajando en nuevos proyectos que pronto añadiré aquí.
+                    <br>
+                    Mi enfoque está en
+                    explorar la integración de APIs avanzadas y el desarrollo de aplicaciones
+                    <strong>full-stack</strong>.
+                </p>
+                <p>
+                    ¡Mantente atento/a para ver las próximas novedades!
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/nellysmata" target="_blank" class="project-link">Ver mi GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contacto">
+        <h2 class="section-title reveal">Contacto</h2>
+        <div class="contact-content reveal">
+            <p>¿Tienes un proyecto en mente o simplemente quieres charlar? ¡Estaré encantada de escucharte!</p>
+            <div class="social-links">
+                <a href="https://github.com/nellysmata" target="_blank" class="social-link" title="GitHub"><img
+                        src="/img/svg/icons.svg" alt="github" srcset=""></a>
+                <a href="https://linkedin.com/in/nellysmata" target="_blank" class="social-link" title="LinkedIn"><img
+                        src="/img/svg/icons-2.svg" alt="linkedin" srcset=""></a>
+            </div>
+            <a href="mailto:tuemail@ejemplo.com" class="email-link">nellys.mata1996@gmail.com</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
