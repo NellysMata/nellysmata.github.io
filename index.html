@@ -5,11 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Desarrolladora Web</title>
-    <link rel="stylesheet" href="/estilos/style.css" />
+    <link rel="preload" href="/estilos/style.css" as="style">
+    <link rel="stylesheet" href="/estilos/style.css" media="print" onload="this.media='all'">
     <link rel="shortcut icon" href="img/sakura.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -167,8 +165,7 @@
                 <div class="project-image">🚀</div>
                 <div class="project-content">
                     <h3>Sakura Calculadora</h3>
-                    <p>Sakura Calculadora** es una calculadora web con una estética inspirada en la **flor de cerezo
-                        (Sakura)</p>
+                    <p>Sakura Calculadora** es una calculadora web con una estética inspirada en la flor de cerezo</p>
                     <div class="project-links">
                         <a href="#" class="project-link">Ver código →</a>
                         <a href="/proyectos/Sakura Calculadora/index.html" class="project-link">Ver demo →</a>
@@ -202,24 +199,39 @@
         <div class="contact-content reveal">
             <p>¿Tienes un proyecto en mente o simplemente quieres charlar? ¡Estaré encantada de escucharte!</p>
             <div class="social-links">
-                <a href="https://linkedin.com/in/nellysmata" target="_blank" class="social-link" title="LinkedIn"><img
-                        src="/img/svg/icons-2.svg" alt="linkedin" srcset=""></a>
-                <a href="https://github.com/nellysmata" target="_blank" class="social-link" title="GitHub"><img
-                        src="/img/svg/icons.svg" alt="github" srcset=""></a>
+                <a href="https://linkedin.com/in/nellysmata" target="_blank" class="social-link" title="LinkedIn">
+                    <img src="/img/svg/icons-2.svg" alt="linkedin">
+                </a>
+                <a href="https://github.com/nellysmata" target="_blank" class="social-link" title="GitHub">
+                    <img src="/img/svg/icons.svg" alt="github">
+                </a>
                 <a href="#" onclick="downloadCV()" class="social-link" title="Descargar CV">
                     <img src="/img/svg/cv.svg" alt="Curriculum Vitae">
                 </a>
             </div>
-            <a href="mailto:tuemail@ejemplo.com" class="email-link">nellysmata.dev@gmail.com</a>
+
+            <!-- FORMULARIO DE CONTACTO -->
+            <form id="contact-form" class="contact-form">
+                <input type="text" name="name" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo" required>
+                <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="form-status"></p>
         </div>
     </section>
+
+
+
     <!-- Footer -->
     <footer>
         <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js" defer></script>
+    <!-- EMAILJS -->
+    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
 </body>
 
 </html>

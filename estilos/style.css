@@ -1,391 +1,428 @@
+.zen-kaku-gothic-new-regular,
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif
+}
+
+.logo,
+nav {
+    display: flex
+}
+
+.cursor,
+.falling-flower,
+nav {
+    position: fixed
+}
+
+.cursor-follower,
+.falling-petal {
+    background-color: var(--magenta)
+}
+
+.center,
+.falling-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.bark,
+.logo,
+.nav-links a,
+body {
+    color: var(--black)
+}
+
+.email-link:hover,
+.hero .highlight,
+.nav-links a:hover {
+    color: var(--magenta)
+}
+
+.hero,
+section {
+    min-height: 100vh
+}
+
+.hero,
+.project-card,
+.txt_typyng {
+    overflow: hidden
+}
+
+footer,
+nav {
+    padding: 2rem 5%
+}
+
+.bark,
+.cursor,
+.cursor-follower,
+.falling-flower,
+.sakura-cv,
+.sakura-petal-cv {
+    pointer-events: none
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
+}
+
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('../fonts/ZenKakuGothicNew-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('../fonts/ZenKakuGothicNew-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
 }
 
 :root {
     --cream: #fff8fd87;
     --magenta: #E91E8C;
     --black: #1A1A1A;
-    --gray: #6B6B6B;
+    --gray: #6B6B6B
 }
 
 .zen-kaku-gothic-new-regular {
-    font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal
 }
 
 body {
-    font-family: "Zen Kaku Gothic New", sans-serif;
     background-color: var(--cream);
-    color: var(--black);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: default;
+    cursor: default
 }
 
-/**===========cursos**************/
 .cursor {
     width: 20px;
     height: 20px;
     border: 2px solid var(--magenta);
     border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
     z-index: 9999;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    opacity: 0;
+    transition: transform .2s, opacity .2s;
+    opacity: 0
 }
 
 .cursor-follower {
     width: 8px;
     height: 8px;
-    background-color: var(--magenta);
     border-radius: 50%;
     position: fixed;
-    pointer-events: none;
     z-index: 9998;
-    transition: transform 0.15s ease;
-    opacity: 0;
+    transition: transform .15s;
+    opacity: 0
 }
 
-/*********Navigation *********************/
 nav {
-    position: fixed;
     top: 0;
     width: 100%;
-    padding: 2rem 5%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background: linear-gradient(to bottom, var(--cream) 0%, transparent 100%);
+    background: linear-gradient(to bottom, var(--cream) 0, transparent 100%)
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--black);
-    display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
-/**************************************************Flores cayendo**********************************************************************/
 .falling-flower {
     width: 20px;
     height: 20px;
-    position: fixed;
-    pointer-events: none;
     z-index: 9999;
-    animation: fall 2.5s ease-in forwards;
+    animation: 2.5s ease-in forwards fall
 }
 
 .falling-petal {
     position: absolute;
     width: 8px;
     height: 8px;
-    background-color: var(--magenta);
-    border-radius: 50% 0 50% 0;
-    opacity: 0.9;
+    border-radius: 50% 0;
+    opacity: .9
 }
 
-.falling-petal:nth-child(1) {
+.falling-petal:first-child,
+.petal:first-child {
     top: 0;
     left: 53%;
-    transform: translate(-50%, 0) rotate(0deg);
+    transform: translate(-50%, 0) rotate(0)
 }
 
-.falling-petal:nth-child(2) {
+.falling-petal:nth-child(2),
+.petal:nth-child(2) {
     top: 48%;
     right: 0;
-    transform: translate(0, -50%) rotate(72deg);
+    transform: translate(0, -50%) rotate(72deg)
 }
 
-.falling-petal:nth-child(3) {
+.falling-petal:nth-child(3),
+.petal:nth-child(3) {
     bottom: 0;
     right: 14%;
-    transform: translate(0, 0) rotate(144deg);
+    transform: translate(0, 0) rotate(144deg)
 }
 
-.falling-petal:nth-child(4) {
+.falling-petal:nth-child(4),
+.petal:nth-child(4) {
     bottom: 0;
     left: 12%;
-    transform: translate(0, 0) rotate(216deg);
+    transform: translate(0, 0) rotate(216deg)
 }
 
-.falling-petal:nth-child(5) {
+.falling-petal:nth-child(5),
+.petal:nth-child(5) {
     top: 44%;
     left: 0;
-    transform: translate(0, -50%) rotate(288deg);
+    transform: translate(0, -50%) rotate(288deg)
 }
 
 .falling-center {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 4px;
     height: 4px;
     background-color: var(--cream);
-    border-radius: 50%;
+    border-radius: 50%
 }
 
 @keyframes fall {
     0% {
-        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
-        opacity: 1;
+        transform: translateY(0) translateX(0) rotate(0) scale(1);
+        opacity: 1
     }
 
     100% {
-        transform: translateY(100vh) translateX(var(--random-x)) rotate(var(--random-rotate)) scale(0.5);
-        opacity: 0;
+        transform: translateY(100vh) translateX(var(--random-x)) rotate(var(--random-rotate)) scale(.5);
+        opacity: 0
     }
 }
 
-/********************************************************Sakura Flower*****************************************************************/
 .sakura {
     width: 30px;
     height: 30px;
     position: relative;
-    animation: float 3s ease-in-out infinite;
+    animation: 3s ease-in-out infinite float
+}
+
+.center,
+.dog-head,
+.petal {
+    position: absolute
 }
 
 .petal:hover {
-    background-color: rgb(247, 135, 172);
+    background-color: #f787ac
 }
 
 .petal {
-    position: absolute;
     width: 12px;
     height: 12px;
     background-color: var(--magenta);
-    border-radius: 50% 0 50% 0;
-    opacity: 0.8;
-}
-
-.petal:nth-child(1) {
-    top: 0;
-    left: 53%;
-    transform: translate(-50%, 0) rotate(0deg);
-}
-
-.petal:nth-child(2) {
-    top: 48%;
-    right: 0;
-    transform: translate(0, -50%) rotate(72deg);
-}
-
-.petal:nth-child(3) {
-    bottom: 0;
-    right: 14%;
-    transform: translate(0, 0) rotate(144deg);
-}
-
-.petal:nth-child(4) {
-    bottom: 0;
-    left: 12%;
-    transform: translate(0, 0) rotate(216deg);
-}
-
-.petal:nth-child(5) {
-    top: 44%;
-    left: 0;
-    transform: translate(0, -50%) rotate(288deg);
+    border-radius: 50% 0;
+    opacity: .8
 }
 
 .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 6px;
     height: 6px;
-    background-color: yellow;
+    background-color: #ff0;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(233, 30, 140, 0.5);
+    box-shadow: 0 0 5px rgba(233, 30, 140, .5)
+}
+
+.cta-button,
+.cv-button {
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(233, 30, 140, .3);
+    cursor: pointer
 }
 
 @keyframes float {
 
     0%,
     100% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0) rotate(0)
     }
 
     50% {
-        transform: translateY(-5px) rotate(5deg);
+        transform: translateY(-5px) rotate(5deg)
     }
 }
 
-/******************************************************************Perrito flotante***************************************/
 .dog-container {
     position: fixed;
     bottom: 50px;
     right: 40px;
     z-index: 1000;
     cursor: pointer;
-    animation: dogFloat 4s ease-in-out infinite;
+    animation: 4s ease-in-out infinite dogFloat
 }
 
 @keyframes dogFloat {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0)
     }
 
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-15px)
     }
 }
 
-/* Ladridos del perrito */
 .bark {
     position: fixed;
     font-size: 16px;
     font-weight: 900;
-    color: var(--black);
-    pointer-events: none;
     z-index: 9999;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    animation: barkFloat 2s ease-out forwards;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    animation: 2s ease-out forwards barkFloat;
+    font-family: 'Comic Sans MS', cursive, sans-serif
 }
 
 @keyframes barkFloat {
     0% {
-        transform: translateY(0) translateX(0) scale(1) rotate(0deg);
-        opacity: 1;
+        transform: translateY(0) translateX(0) scale(1) rotate(0);
+        opacity: 1
     }
 
     100% {
         transform: translateY(-150px) translateX(var(--random-x)) scale(1.5) rotate(10deg);
-        opacity: 0;
+        opacity: 0
     }
 }
 
 .dog {
     width: 80px;
     height: 80px;
-    position: relative;
+    position: relative
 }
 
-/* Cabeza */
 .dog-head {
     width: 68px;
     height: 65px;
-    background-color: #FAF6F1;
+    background-color: #faf6f1;
     border-radius: 50% 50% 45% 45%;
-    position: absolute;
     top: 10px;
     left: 10px;
-    border: 3px solid var(--black);
+    border: 3px solid var(--black)
 }
 
-/* Mancha marrón en la cabeza */
+.dog-mouth,
+.dog-nose,
+.dog-snout {
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.dog-ear,
+.dog-spot {
+    background-color: #8b6f47;
+    border-radius: 50%;
+    position: absolute
+}
+
 .dog-spot {
     width: 25px;
     height: 20px;
-    background-color: #8B6F47;
-    border-radius: 50%;
-    position: absolute;
     top: 5px;
-    right: 8px;
+    right: 8px
 }
 
-/* Orejas */
 .dog-ear {
     width: 20px;
     height: 30px;
-    background-color: #8B6F47;
+    border: 2px solid var(--black)
+}
+
+.dog-eye,
+.dog-eye::after,
+.dog-snout {
     border-radius: 50%;
-    position: absolute;
-    border: 2px solid var(--black);
+    position: absolute
 }
 
 .dog-ear.left {
     top: 5px;
     left: 5px;
-    transform: rotate(-20deg);
+    transform: rotate(-20deg)
 }
 
 .dog-ear.right {
     top: 5px;
     right: -5px;
-    transform: rotate(20deg);
+    transform: rotate(20deg)
 }
 
-/* Ojos */
 .dog-eye {
     width: 8px;
     height: 8px;
     background-color: var(--black);
-    border-radius: 50%;
-    position: absolute;
-    top: 25px;
+    top: 25px
 }
 
 .dog-eye.left {
-    left: 15px;
+    left: 15px
 }
 
 .dog-eye.right {
-    right: 15px;
+    right: 15px
 }
 
-/* Brillo en los ojos */
 .dog-eye::after {
     content: '';
     width: 3px;
     height: 3px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
+    background-color: #fff;
     top: 1px;
-    left: 1px;
+    left: 1px
 }
 
-/* Hocico */
 .dog-snout {
     width: 25px;
     height: 20px;
-    background-color: #FAF6F1;
-    border-radius: 50%;
-    position: absolute;
+    background-color: #faf6f1;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid var(--black);
+    border: 2px solid var(--black)
 }
 
-/* Nariz */
+.dog-mouth,
+.dog-nose,
+.menu-toggle span {
+    background-color: var(--black)
+}
+
 .dog-nose {
     width: 8px;
     height: 6px;
-    background-color: var(--black);
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 50%;
     position: absolute;
-    top: 2px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 2px
 }
 
-/* Boca */
 .dog-mouth {
     width: 2px;
     height: 8px;
-    background-color: var(--black);
     position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 8px
 }
 
-.dog-mouth::before,
-.dog-mouth::after {
+.dog-mouth::after,
+.dog-mouth::before {
     content: '';
     width: 8px;
     height: 8px;
@@ -394,67 +431,47 @@ nav {
     border-right: none;
     border-radius: 0 0 0 100%;
     position: absolute;
-    top: 6px;
+    top: 6px
 }
 
 .dog-mouth::before {
     left: -6px;
-    transform: rotate(-10deg);
+    transform: rotate(-10deg)
 }
 
 .dog-mouth::after {
     right: -6px;
-    transform: rotate(10deg) scaleX(-1);
+    transform: rotate(10deg) scaleX(-1)
 }
 
-@keyframes wave {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(-30deg);
-    }
-
-    75% {
-        transform: rotate(30deg);
-    }
-}
-
-/******************************************** Menú Hamburguesa**************************************************************/
 .menu-toggle {
-    display: none;
+    display: none
 }
 
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: var(--black);
-    transition: all 0.3s ease;
-    border-radius: 2px;
+    transition: .3s;
+    border-radius: 2px
 }
 
-/* Animación del menú hamburguesa*/
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+.menu-toggle.active span:first-child {
+    transform: rotate(45deg) translate(5px, 5px)
 }
 
 .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
+    opacity: 0
 }
 
 .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    transform: rotate(-45deg) translate(7px, -7px)
 }
 
-/*Menu magico*/
 .menu-wrap {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 1
 }
 
 .menu-wrap .toggler {
@@ -465,7 +482,7 @@ nav {
     cursor: pointer;
     width: 60px;
     height: 60px;
-    opacity: 0;
+    opacity: 0
 }
 
 .menu-wrap .hamburger {
@@ -479,192 +496,174 @@ nav {
     background: var(--primary-color);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
-/*****full screen****/
+.nav-links a::after,
+.section-title::after {
+    content: '';
+    left: 0;
+    background-color: var(--magenta)
+}
+
 .menu-fullscreen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: var(--magenta, rgba(0, 0, 0, 0.9));
+    background: var(--magenta, rgba(0, 0, 0, .9));
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.8;
+    opacity: .8;
     visibility: hidden;
-    transform: scale(0.8);
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-    z-index: 2000;
+    transform: scale(.8);
+    transition: opacity .4s, transform .4s, visibility .4s;
+    z-index: 2000
 }
 
 .menu-fullscreen.active {
     opacity: 1;
     visibility: visible;
     z-index: 2000;
-    transform: scale(1);
+    transform: scale(1)
 }
 
 .menu-fullscreen .menu-inner ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: center
 }
 
 .menu-fullscreen .menu-inner ul li {
-    margin: 1rem 0;
+    margin: 1rem 0
 }
 
 .menu-fullscreen .menu-inner ul li a {
     font-size: 2rem;
     color: var(--link-color, #fff);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color .3s
 }
 
 .menu-fullscreen .menu-inner ul li a:hover {
-    color: var(--link-hover, #ddd);
+    color: var(--link-hover, #ddd)
 }
 
-.menu-fullscreen.active~.nav-links,
 .menu-fullscreen.active+.nav-links,
-.menu-fullscreen.active~nav .nav-links {
-    display: none !important;
-}
-
+.menu-fullscreen.active~.nav-links,
+.menu-fullscreen.active~nav .nav-links,
 body.menu-open .nav-links {
-    display: none !important;
+    display: none !important
 }
 
-/***********links***************/
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
-    right: -100%;
+    right: -100%
 }
 
 .nav-links a {
-    color: var(--black);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
+    transition: color .3s;
+    position: relative
 }
 
 .nav-links a::after {
-    content: '';
     position: absolute;
     bottom: -5px;
-    left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--magenta);
-    transition: width 0.3s ease;
+    transition: width .3s
 }
 
-.nav-links a:hover {
-    color: var(--magenta);
-}
-
+.container_typing_text,
 .nav-links a:hover::after {
-    width: 100%;
+    width: 100%
 }
 
 .nav-links.active {
-    left: 0;
+    left: 0
 }
 
-/****************Hero Section******************/
 .hero {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0 5%;
-    overflow: hidden;
+    padding: 0 5%
 }
 
 .hero-content {
     text-align: center;
-    z-index: 2;
+    z-index: 2
 }
 
 .hero h1 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 800;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.2
 }
 
 .hero .highlight {
-    color: var(--magenta);
-    display: inline-block;
+    display: inline-block
 }
 
 .highlight:hover {
-    text-shadow: 0px 0px 7px #E91E8C;
+    text-shadow: 0 0 7px #e91e8c
 }
 
 .hero p {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     color: var(--gray);
     margin-bottom: 2rem;
-    animation: 1s ease 0.4s backwards;
+    animation: 1s .4s backwards
 }
 
 .cta-button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     padding: 18px 32px;
     background: linear-gradient(135deg, var(--magenta), #ff4db8);
-    color: white;
-    text-decoration: none;
+    color: #fff;
     border-radius: 16px;
     font-weight: 700;
-    box-shadow: 0 5px 20px rgba(233, 30, 140, 0.3);
-    border: none;
-    cursor: pointer;
+    border: none
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.cv-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(233, 30, 140, 0.5);
-}
-
-/******typing-text******/
-.container_typing_text {
-    width: 100%;
+    box-shadow: 0 8px 30px rgba(233, 30, 140, .5)
 }
 
 .txt_typyng {
     display: inline-block;
-    color: #2C3A47;
+    color: #2c3a47;
     font-family: 'Courier New', Courier, monospace;
     width: 20ch;
     text-wrap: nowrap;
-    overflow: hidden;
-    animation: typing 4s steps(80) infinite alternate-reverse, blink 0.8s step-end infinite;
+    animation: 4s steps(80) infinite alternate-reverse typing, .8s step-end infinite blink
 }
 
 @keyframes typing {
     from {
-        width: 0ch;
+        width: 0
     }
 }
 
 @keyframes blink {
     50% {
-        border-color: transparent;
+        border-color: transparent
     }
 }
 
-/************Background Animation******************/
 .wave {
     position: absolute;
     bottom: 0;
@@ -672,35 +671,34 @@ body.menu-open .nav-links {
     width: 100%;
     height: 100px;
     background: var(--magenta);
-    opacity: 0.05;
-    animation: wave 8s infinite ease-in-out;
+    opacity: .05;
+    animation: 8s ease-in-out infinite wave
 }
 
 .wave:nth-child(2) {
-    animation: wave 10s infinite ease-in-out;
-    opacity: 0.03;
-    bottom: 20px;
+    animation: 10s ease-in-out infinite wave;
+    opacity: .03;
+    bottom: 20px
 }
 
 @keyframes wave {
 
     0%,
     100% {
-        transform: translateX(0) scaleY(1);
+        transform: rotate(0);
+        transform: translateX(0) scaleY(1)
     }
 
     50% {
-        transform: translateX(-25%) scaleY(0.8);
+        transform: translateX(-25%) scaleY(.8)
     }
 }
 
-/**********Sections*******************/
 section {
     padding: 6rem 5%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center
 }
 
 .section-title {
@@ -708,37 +706,71 @@ section {
     font-weight: 700;
     margin-bottom: 3rem;
     position: relative;
-    display: inline-block;
+    display: inline-block
+}
+
+.about-text strong,
+.project-link {
+    font-weight: 600
 }
 
 .section-title::after {
-    content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
     width: 60px;
-    height: 4px;
-    background-color: var(--magenta);
+    height: 4px
 }
 
-/*********************About Section************************/
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: center
 }
 
 .about-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: var(--gray);
-    line-height: 1.8;
+    line-height: 1.8
 }
 
-.about-text strong {
-    color: var(--black);
-    font-weight: 600;
+.about-text strong,
+.project-link:hover {
+    color: var(--black)
+}
+
+/* Estilos básicos para el formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--magenta);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--black);
+    color: var(--magenta)
 }
 
 .about-image-container {
@@ -748,127 +780,112 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 0.1s ease-in-out, transform 0.8s ease-in-out;
+    transition: background-image .1s ease-in-out, transform .8s ease-in-out;
     cursor: pointer;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .about-image-container:hover {
     background-image: url('/img/osa_abiertos-sf.png');
-    transform: scale(1.06) translateY(-10px);
-
+    transform: scale(1.06) translateY(-10px)
 }
-
-/***********************Projects Section**************************************/
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 2rem
 }
 
-/* Card styles */
 .project-card {
-    background: white;
+    background: #fff;
     border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    transition: .3s;
+    border: 2px solid transparent
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--magenta);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .1)
 }
 
 .project-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, var(--black) 0%, var(--magenta) 100%);
+    background: linear-gradient(135deg, var(--black) 0, var(--magenta) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    color: var(--cream);
+    color: var(--cream)
+}
+
+.social-link,
+.social-link img {
+    width: 50px;
+    height: 50px
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: 1.5rem
 }
 
 .project-content h3 {
     color: var(--black);
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    font-size: 1.3rem
 }
 
 .project-content p {
     color: var(--gray);
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .project-links {
     display: flex;
-    gap: 1rem;
+    gap: 1rem
 }
 
 .project-link {
     color: var(--magenta);
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color .3s
 }
-
-.project-link:hover {
-    color: var(--black);
-}
-
 
 .coming-soon-card {
-    background-color: ;
-    border: 2px #cccccc;
-    opacity: 0.85;
+    border: 2px #ccc;
+    opacity: .85;
     text-align: center;
     padding: 24px;
-    margin-top: 32px;
+    margin-top: 32px
 }
 
 .coming-soon-card .project-image {
-    font-size: 3em;
-
+    font-size: 3em
 }
 
-/****************redes sociales************************/
 .social-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 2rem
 }
 
 .social-link {
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--cream);
     text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 700;
+    transition: .3s;
+    font-weight: 700
 }
 
 .social-link:hover {
-    transform: scale(1.1);
-}
-
-.social-link img {
-    width: 50px;
-    height: 50px;
+    transform: scale(1.1)
 }
 
 .email-link {
@@ -876,241 +893,213 @@ section {
     color: var(--black);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color .3s;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
-.email-link:hover {
-    color: var(--magenta);
-}
-
-/* Footer */
 footer {
-    padding: 2rem 5%;
     text-align: center;
     color: var(--gray);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, .1)
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(30px)
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0)
     }
 }
 
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateX(-30px)
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0)
     }
 }
 
-/* Scroll Reveal */
 .reveal {
     transform: translateY(50px);
-    transition: all 0.8s ease;
+    transition: .8s
 }
 
 .reveal.active {
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
-/* Botón de CV con perrito */
 .cv-button-container {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-around;
     padding: 18px 32px;
-    position: relative;
+    position: relative
 }
 
 .cv-button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     padding: 18px 32px;
     background: linear-gradient(135deg, var(--magenta), #ff4db8);
-    color: white;
-    text-decoration: none;
+    color: #fff;
     border-radius: 16px;
     font-size: 1.1rem;
-    box-shadow: 0 5px 20px rgba(233, 30, 140, 0.3);
-    border: none;
-    cursor: pointer;
+    border: none
 }
 
-.cv-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(233, 30, 140, 0.5);
-}
-
-/* Perrito delivery */
 .dog-delivery {
     position: fixed;
     bottom: 100px;
     left: -200px;
     z-index: 2000;
     cursor: pointer;
-    transition: left 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: left 2s cubic-bezier(.68, -.55, .265, 1.55);
     transform: scale(1.2);
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .2))
 }
 
 .dog-delivery.running {
     left: 50%;
     transform: translateX(-50%) scale(1.2);
+    animation: .5s ease-in-out infinite dogBounce
 }
 
 .dog-delivery:hover {
-    transform: translateX(-50%) scale(1.3);
+    transform: translateX(-50%) scale(1.3)
 }
 
-/**dialogo con perrito**/
+.cv-paper::before,
+.dialogo {
+    transform: translate(-50%, -50%);
+    left: 50%
+}
+
 .dialogo {
     position: fixed;
     top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 20px 30px;
     border-radius: 15px;
     font-size: 1.2em;
     z-index: 1000;
-    color: var(--magenta);
+    color: var(--magenta)
 }
 
-/* CV en la boca del perrito */
 .cv-paper {
     position: absolute;
     top: 30px;
     right: -15px;
     width: 20px;
     height: 25px;
-    background: white;
+    background: #fff;
     border: 2px solid var(--black);
     border-radius: 2px;
     transform: rotate(-20deg);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2)
 }
 
 .cv-paper::before {
     content: '📄';
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
-}
-
-/* Animación de salto del perrito */
-.dog-delivery.running {
-    animation: dogBounce 0.5s ease-in-out infinite;
+    font-size: 12px
 }
 
 @keyframes dogBounce {
 
     0%,
     100% {
-        bottom: 100px;
+        bottom: 100px
     }
 
     50% {
-        bottom: 120px;
+        bottom: 120px
     }
 }
 
-/* Mensaje de agradecimiento */
 .thank-you-message {
     position: fixed;
+    display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background: white;
+    background: #fff;
     padding: 2rem 3rem;
     border-radius: 20px;
     border: 3px solid var(--magenta);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
     z-index: 2001;
     text-align: center;
     opacity: 0;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: .5s cubic-bezier(.68, -.55, .265, 1.55)
 }
 
 .thank-you-message.show {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
+    opacity: 1
 }
 
 .thank-you-message h3 {
     font-size: 2rem;
     color: var(--black);
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .thank-you-message p {
     color: var(--gray);
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem
 }
 
 .thank-you-message button {
-    padding: 0.8rem 2rem;
+    padding: .8rem 2rem;
     background: var(--magenta);
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: .3s
 }
 
 .thank-you-message button:hover {
     background: var(--black);
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
-/* Flores de sakura cayendo (para el CV) */
 .sakura-cv {
     position: fixed;
     width: 15px;
     height: 15px;
-    pointer-events: none;
     z-index: 1999;
-    animation: sakuraFall 4s ease-in forwards;
-    opacity: 0;
-}
-
-.sakura-cv,
-.sakura-petal-cv {
-    pointer-events: none;
+    animation: 4s ease-in forwards sakuraFall;
+    opacity: 0
 }
 
 @keyframes sakuraFall {
     0% {
-        transform: translateY(-50px) translateX(0) rotate(0deg);
-        opacity: 0;
+        transform: translateY(-50px) translateX(0) rotate(0);
+        opacity: 0
     }
 
     10% {
-        opacity: 1;
+        opacity: 1
     }
 
     100% {
         transform: translateY(100vh) translateX(var(--random-x)) rotate(720deg);
-        opacity: 0;
+        opacity: 0
     }
 }
 
@@ -1118,82 +1107,78 @@ footer {
     width: 5px;
     height: 5px;
     background-color: var(--magenta);
-    border-radius: 50% 0 50% 0;
+    border-radius: 50% 0;
     position: absolute;
-    opacity: 0.8;
+    opacity: .8
 }
 
-/*=================MEDIAQUERYS======================*/
-
-@media (max-width: 600px) {
+@media (max-width:600px) {
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
+
+    .dog-container,
     .dog-delivery {
-        transform: scale(0.8);
+        transform: scale(.8)
     }
 
     .dog-delivery.running {
-        transform: translateX(-50%) scale(0.8);
+        transform: translateX(-50%) scale(.8)
     }
 
     .thank-you-message {
         width: 90%;
-        padding: 1.5rem;
+        padding: 1.5rem
     }
 
     .dog-container {
         bottom: 60px;
-        right: 20px;
-        transform: scale(0.8);
+        right: 20px
     }
 
     nav {
-        padding: 1.5rem 5%;
+        padding: 1.5rem 5%
     }
 
     .nav-links {
-        display: none !important;
+        display: none !important
     }
 
     .about-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
-    .about-image-container,
-    .about-image {
+    .about-image,
+    .about-image-container {
         height: 300px;
         width: 100%;
         max-width: 350px;
-        margin: 0 auto;
+        margin: 0 auto
     }
 
     section {
-        padding: 4rem 5%;
+        padding: 4rem 5%
     }
 
     .cursor,
-    .cursor-follower {
-        display: none;
+    .cursor-follower,
+    .menu {
+        display: none
+    }
+
+    .menu-toggle,
+    .menu.active {
+        display: flex
     }
 
     .menu-toggle {
-        display: flex;
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
-        z-index: 2100;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .menu.active {
-        display: flex;
+        z-index: 2100
     }
 
     .menu-overlay {
@@ -1202,33 +1187,33 @@ footer {
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, .5);
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s ease;
-        z-index: 998;
+        transition: opacity .3s;
+        z-index: 998
     }
 
     .menu-overlay.active {
         opacity: 1;
-        pointer-events: all;
+        pointer-events: all
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .projects-grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr)
     }
 
     .cv-button-container {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1rem
     }
 
     .cta-button {
         padding: 14px 24px;
         font-size: 1rem;
         width: 260px;
-        justify-content: center;
+        justify-content: center
     }
 }
