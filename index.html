@@ -4,20 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <<<<<<< Updated upstream <meta name="description"
+    <meta name="description"
         content="Portfolio de Nellys Mata - Desarrolladora Web especializada en HTML, CSS, JavaScript, Java y PHP. Buscando mi primera oportunidad profesional." />
     <meta name="theme-color" content="#E91E8C" />
     <title>Nellys Mata - Desarrolladora Web | Portfolio</title>
 
-    <!-- Preconnect to external domains -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.emailjs.com">
 
-    <!-- Optimized font loading with display swap -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <!-- Critical CSS inline -->
     <style>
         * {
             margin: 0;
@@ -67,21 +65,15 @@
         }
     </style>
 
-    <!-- Deferred CSS -->
-    <link rel="preload" href="/estilos/style-optimized.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="/estilos/style-optimized.css">
-    </noscript>
 
-    <!-- Optimized favicon -->
     <link rel="icon" href="/img/sakura.webp" type="image/webp" sizes="32x32">
     <link rel="apple-touch-icon" href="/img/sakura.webp">
-    =======
+
     <title>Portfolio - Desarrolladora Web</title>
     <link rel="preload" href="/estilos/style.css" as="style">
     <link rel="stylesheet" href="/estilos/style.css" media="print" onload="this.media='all'">
     <link rel="shortcut icon" href="img/sakura.png" type="image/x-icon">
-    >>>>>>> Stashed changes
+
 </head>
 
 <body>
@@ -278,87 +270,51 @@
         <div class="contact-content reveal">
             <p>¿Tienes un proyecto en mente o simplemente quieres charlar? ¡Estaré encantada de escucharte!</p>
             <div class="social-links">
-                <<<<<<< Updated upstream <a href="https://linkedin.com/in/nellysmata" target="_blank"
-                    rel="noopener noreferrer" class="social-link" title="LinkedIn"
-                    aria-label="Visitar perfil de LinkedIn">
+                <a href="https://linkedin.com/in/nellysmata" target="_blank" rel="noopener noreferrer"
+                    class="social-link" title="LinkedIn" aria-label="Visitar perfil de LinkedIn">
                     <img src="/img/svg/icons-2.svg" alt="LinkedIn" width="40" height="40" loading="lazy">
+                </a>
+                <a href="https://github.com/nellysmata" target="_blank" rel="noopener noreferrer" class="social-link"
+                    title="GitHub" aria-label="Visitar perfil de GitHub">
+                    <img src="/img/svg/icons.svg" alt="GitHub" width="40" height="40" loading="lazy">
+                </a>
+                <a href="#" onclick="downloadCV()" class="social-link" title="Descargar CV"
+                    aria-label="Descargar Curriculum Vitae">
+                    <img src="/img/svg/cv.svg" alt="Curriculum Vitae" width="40" height="40" loading="lazy">
+                    <a href="https://linkedin.com/in/nellysmata" target="_blank" class="social-link" title="LinkedIn">
+                        <img src="/img/svg/icons-2.svg" alt="linkedin">
                     </a>
-                    <a href="https://github.com/nellysmata" target="_blank" rel="noopener noreferrer"
-                        class="social-link" title="GitHub" aria-label="Visitar perfil de GitHub">
-                        <img src="/img/svg/icons.svg" alt="GitHub" width="40" height="40" loading="lazy">
+                    <a href="https://github.com/nellysmata" target="_blank" class="social-link" title="GitHub">
+                        <img src="/img/svg/icons.svg" alt="github">
                     </a>
-                    <a href="#" onclick="downloadCV()" class="social-link" title="Descargar CV"
-                        aria-label="Descargar Curriculum Vitae">
-                        <img src="/img/svg/cv.svg" alt="Curriculum Vitae" width="40" height="40" loading="lazy">
-                        =======
-                        <a href="https://linkedin.com/in/nellysmata" target="_blank" class="social-link"
-                            title="LinkedIn">
-                            <img src="/img/svg/icons-2.svg" alt="linkedin">
-                        </a>
-                        <a href="https://github.com/nellysmata" target="_blank" class="social-link" title="GitHub">
-                            <img src="/img/svg/icons.svg" alt="github">
-                        </a>
-                        <a href="#" onclick="downloadCV()" class="social-link" title="Descargar CV">
-                            <img src="/img/svg/cv.svg" alt="Curriculum Vitae">
-                            >>>>>>> Stashed changes
-                        </a>
+                    <a href="#" onclick="downloadCV()" class="social-link" title="Descargar CV">
+                        <img src="/img/svg/cv.svg" alt="Curriculum Vitae">
+
+                    </a>
             </div>
 
-            <!-- FORMULARIO DE CONTACTO -->
-            <form id="contact-form" class="contact-form">
-                <<<<<<< Updated upstream <input type="text" name="name" placeholder="Tu nombre" required
-                    aria-label="Tu nombre">
-                    <input type="email" name="email" placeholder="Tu correo" required
-                        aria-label="Tu correo electrónico">
-                    <textarea name="message" placeholder="Tu mensaje" required aria-label="Tu mensaje"></textarea>
-                    <button type="submit">Enviar</button>
-            </form>
-            <p id="form-status" role="status" aria-live="polite"></p>
-        </div>
-    </section>
+            <!-- Footer -->
+            <footer>
+                <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
+            </footer>
 
-    =======
-    <input type="text" name="name" placeholder="Tu nombre" required>
-    <input type="email" name="email" placeholder="Tu correo" required>
-    <textarea name="message" placeholder="Tu mensaje" required></textarea>
-    <button type="submit">Enviar</button>
-    </form>
-    <p id="form-status"></p>
-    </div>
-    </section>
+            <!-- Scripts - Deferred and async -->
+            <script>
+                // Inline critical JavaScript for immediate functionality
+                const loadDeferredStyles = () => {
+                    const addStylesNode = document.getElementById("deferred-styles");
+                    const replacement = document.createElement("div");
+                    replacement.innerHTML = addStylesNode.textContent;
+                    document.body.appendChild(replacement);
+                    addStylesNode.parentElement.removeChild(addStylesNode);
+                };
+                const raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+                if (raf) raf(() => window.setTimeout(loadDeferredStyles, 0));
+                else window.addEventListener('load', loadDeferredStyles);
+            </script>
 
 
-
-    >>>>>>> Stashed changes
-    <!-- Footer -->
-    <footer>
-        <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
-    </footer>
-
-    <<<<<<< Updated upstream <!-- Scripts - Deferred and async -->
-        <script>
-            // Inline critical JavaScript for immediate functionality
-            const loadDeferredStyles = () => {
-                const addStylesNode = document.getElementById("deferred-styles");
-                const replacement = document.createElement("div");
-                replacement.innerHTML = addStylesNode.textContent;
-                document.body.appendChild(replacement);
-                addStylesNode.parentElement.removeChild(addStylesNode);
-            };
-            const raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-            if (raf) raf(() => window.setTimeout(loadDeferredStyles, 0));
-            else window.addEventListener('load', loadDeferredStyles);
-        </script>
-        <script src="/js/script-optimized.js" defer></script>
-        <!-- EMAILJS - Async loading -->
-        <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js" async></script>
-        =======
-        <!-- Scripts -->
-        <script src="/js/script.js" defer></script>
-        <!-- EMAILJS -->
-        <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
-        >>>>>>> Stashed changes
 </body>
 
 </html>
