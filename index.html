@@ -9,7 +9,6 @@
     <meta name="theme-color" content="#E91E8C" />
     <title>Nellys Mata - Desarrolladora Web | Portfolio</title>
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.emailjs.com">
@@ -65,23 +64,21 @@
         }
     </style>
 
+    <link rel="stylesheet" href="estilos/style.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="estilos/style.css">
+    </noscript>
 
-    <link rel="icon" href="/img/sakura.webp" type="image/webp" sizes="32x32">
-    <link rel="apple-touch-icon" href="/img/sakura.webp">
-
-    <title>Portfolio - Desarrolladora Web</title>
-    <link rel="preload" href="/estilos/style.css" as="style">
-    <link rel="stylesheet" href="/estilos/style.css" media="print" onload="this.media='all'">
+    <link rel="icon" href="img/sakura.webp" type="image/webp" sizes="32x32">
+    <link rel="apple-touch-icon" href="img/sakura.webp">
     <link rel="shortcut icon" href="img/sakura.png" type="image/x-icon">
 
 </head>
 
 <body>
-    <!-- Cursor personalizado (solo desktop) -->
     <div class="cursor" aria-hidden="true"></div>
     <div class="cursor-follower" aria-hidden="true"></div>
 
-    <!-- Navegación -->
     <nav role="navigation" aria-label="Navegación principal">
         <div class="logo">
             <div class="sakura sakura-logo" aria-hidden="true">
@@ -101,7 +98,6 @@
             <li><a href="#contacto">Contacto</a></li>
         </ul>
 
-        <!-- Menú hamburguesa -->
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
@@ -118,7 +114,6 @@
         </div>
     </nav>
 
-    <!-- Sección Hero -->
     <section class="hero" id="inicio">
         <div class="wave" aria-hidden="true"></div>
         <div class="wave" aria-hidden="true"></div>
@@ -127,13 +122,11 @@
             <h1>Hola, soy <span class="highlight">Nellys Mata</span></h1>
             <div class="cv-button-container">
                 <a href="#contacto" class="cta-button">¿Hablamos?</a>
-                <!-- Botón de CV con perrito -->
                 <button class="cv-button" id="cvButton" aria-label="Descargar CV">
                     <span aria-hidden="true">📄</span>
                     <span>¡Píde mi CV al perrito!</span>
                 </button>
             </div>
-            <!-- Perrito delivery (oculto inicialmente) -->
             <div class="dog-delivery" id="dogDelivery" style="display: none;" aria-hidden="true">
                 <div class="dog">
                     <div class="dog-ear left"></div>
@@ -156,11 +149,9 @@
                     <div class="dog-back-paw left"></div>
                     <div class="dog-back-paw right"></div>
                     <div class="dog-tail"></div>
-                    <!-- CV en la boca -->
                     <div class="cv-paper"></div>
                 </div>
             </div>
-            <!-- Mensaje de agradecimiento -->
             <div class="thank-you-message" id="thankYouMessage" role="alert" aria-live="polite">
                 <h3>¡Gracias por tu interés! 🐾</h3>
                 <p>El CV se está descargando...</p>
@@ -169,7 +160,6 @@
         </div>
     </section>
 
-    <!-- Sección Sobre mí -->
     <section id="sobre-mi">
         <h2 class="section-title reveal">Sobre mí</h2>
         <div class="about-content">
@@ -195,13 +185,11 @@
             </div>
             <div class="about-image reveal">
                 <div class="about-image-container" role="img" aria-label="Ilustración de Nellys Mata">
-                    <!-- Lazy loaded background image via CSS -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección Proyectos -->
     <section id="proyectos">
         <h2 class="section-title reveal">Mis proyectos</h2>
         <div class="projects-grid">
@@ -214,7 +202,7 @@
                         filtros y persistencia de datos.</p>
                     <div class="project-links">
                         <a href="#" class="project-link">Ver código →</a>
-                        <a href="/proyectos/SakuraTasks/sakuratasks.html" target="_blank" class="project-link">Ver→</a>
+                        <a href="proyectos/SakuraTasks/sakuratasks.html" target="_blank" class="project-link">Ver→</a>
                     </div>
                 </div>
             </article>
@@ -226,7 +214,7 @@
                         tiene un diseño minimalista siguiendo con el estilo de mi portfolio. .</p>
                     <div class="project-links">
                         <a href="#" class="project-link">Ver código →</a>
-                        <a href="/proyectos/Sakuraclima/index.html" class="project-link">Ver demo →</a>
+                        <a href="proyectos/Sakuraclima/index.html" class="project-link">Ver demo →</a>
                     </div>
                 </div>
             </article>
@@ -237,7 +225,7 @@
                     <p>Sakura Calculadora** es una calculadora web con una estética inspirada en la flor de cerezo</p>
                     <div class="project-links">
                         <a href="#" class="project-link">Ver código →</a>
-                        <a href="/proyectos/Sakura Calculadora/index.html" class="project-link">Ver demo →</a>
+                        <a href="proyectos/Sakura Calculadora/index.html" class="project-link">Ver demo →</a>
                     </div>
                 </div>
             </article>
@@ -264,7 +252,6 @@
         </article>
     </section>
 
-    <!-- Contact Section -->
     <section id="contacto">
         <h2 class="section-title reveal">Contacto</h2>
         <div class="contact-content reveal">
@@ -272,48 +259,28 @@
             <div class="social-links">
                 <a href="https://linkedin.com/in/nellysmata" target="_blank" rel="noopener noreferrer"
                     class="social-link" title="LinkedIn" aria-label="Visitar perfil de LinkedIn">
-                    <img src="/img/svg/icons-2.svg" alt="LinkedIn" width="40" height="40" loading="lazy">
+                    <img src="img/svg/icons-2.svg" alt="LinkedIn" width="40" height="40" loading="lazy">
                 </a>
                 <a href="https://github.com/nellysmata" target="_blank" rel="noopener noreferrer" class="social-link"
                     title="GitHub" aria-label="Visitar perfil de GitHub">
-                    <img src="/img/svg/icons.svg" alt="GitHub" width="40" height="40" loading="lazy">
+                    <img src="img/svg/icons.svg" alt="GitHub" width="40" height="40" loading="lazy">
                 </a>
                 <a href="#" onclick="downloadCV()" class="social-link" title="Descargar CV"
                     aria-label="Descargar Curriculum Vitae">
-                    <img src="/img/svg/cv.svg" alt="Curriculum Vitae" width="40" height="40" loading="lazy">
-                    <a href="https://linkedin.com/in/nellysmata" target="_blank" class="social-link" title="LinkedIn">
-                        <img src="/img/svg/icons-2.svg" alt="linkedin">
-                    </a>
-                    <a href="https://github.com/nellysmata" target="_blank" class="social-link" title="GitHub">
-                        <img src="/img/svg/icons.svg" alt="github">
-                    </a>
-                    <a href="#" onclick="downloadCV()" class="social-link" title="Descargar CV">
-                        <img src="/img/svg/cv.svg" alt="Curriculum Vitae">
-
-                    </a>
+                    <img src="img/svg/cv.svg" alt="Curriculum Vitae" width="40" height="40" loading="lazy">
+                </a>
             </div>
+        </div>
 
-            <!-- Footer -->
-            <footer>
-                <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
-            </footer>
+        <footer>
+            <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
+        </footer>
+    </section>
 
-            <!-- Scripts - Deferred and async -->
-            <script>
-                // Inline critical JavaScript for immediate functionality
-                const loadDeferredStyles = () => {
-                    const addStylesNode = document.getElementById("deferred-styles");
-                    const replacement = document.createElement("div");
-                    replacement.innerHTML = addStylesNode.textContent;
-                    document.body.appendChild(replacement);
-                    addStylesNode.parentElement.removeChild(addStylesNode);
-                };
-                const raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-                if (raf) raf(() => window.setTimeout(loadDeferredStyles, 0));
-                else window.addEventListener('load', loadDeferredStyles);
-            </script>
 
+    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+
+    <script src="js/script.js" defer></script>
 
 </body>
 
