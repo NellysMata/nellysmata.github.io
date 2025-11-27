@@ -350,7 +350,7 @@ nav {
 }
 
 /* =========================================================================
-   5. Hero Section
+5. Hero Section
    ========================================================================= */
 
 .hero {
@@ -367,11 +367,14 @@ nav {
     z-index: 2
 }
 
+
 .hero h1 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 800;
+    margin-top: 0;
+
     margin-bottom: 1rem;
-    line-height: 1.2
+    line-height: 1.2;
 }
 
 .hero .highlight {
