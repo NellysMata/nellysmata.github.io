@@ -367,8 +367,11 @@ nav {
     z-index: 2
 }
 
+h1 {
+    display: none;
+}
 
-.hero h1 {
+.hero h2 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 800;
     margin-top: 0;
