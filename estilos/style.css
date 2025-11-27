@@ -4,21 +4,49 @@
    1. Variables y Font-Face
    ========================================================================= */
 
-/* Font-Face Definitions */
+/* LIGHT (300) */
 @font-face {
     font-family: 'Zen Kaku Gothic New';
-    src: url('../fonts/ZenKakuGothicNew-Regular.ttf');
-    font-weight: 400;
+    src: url('fonts/ZenKakuGothicNew-Light.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
-    font-display: swap
+    font-display: swap;
 }
 
+/* REGULAR (400) */
 @font-face {
     font-family: 'Zen Kaku Gothic New';
-    src: url('../fonts/ZenKakuGothicNew-Bold.ttf');
+    src: url('fonts/ZenKakuGothicNew-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* MEDIUM (500) */
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('fonts/ZenKakuGothicNew-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* BOLD (700) */
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('fonts/ZenKakuGothicNew-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-    font-display: swap
+    font-display: swap;
+}
+
+/* BLACK (900) */
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('fonts/ZenKakuGothicNew-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* Variables de Color */
