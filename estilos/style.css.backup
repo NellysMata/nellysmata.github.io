@@ -57,6 +57,74 @@
     --gray: #6B6B6B
 }
 
+/* Reglas combinadas iniciales para performance/legibilidad */
+.zen-kaku-gothic-new-regular,
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif
+}
+
+.logo,
+nav {
+    display: flex
+}
+
+.cursor,
+.falling-flower,
+nav {
+    position: fixed
+}
+
+.cursor-follower,
+.falling-petal {
+    background-color: var(--magenta)
+}
+
+.center,
+.falling-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.bark,
+.logo,
+.nav-links a,
+body {
+    color: var(--black)
+}
+
+.email-link:hover,
+.hero .highlight,
+.nav-links a:hover {
+    color: var(--magenta)
+}
+
+.hero,
+section {
+    min-height: 100vh
+}
+
+.hero,
+.project-card,
+.txt_typyng {
+    overflow: hidden
+}
+
+footer,
+nav {
+    padding: 2rem 5%
+}
+
+.bark,
+.cursor,
+.cursor-follower,
+.falling-flower,
+.sakura-cv,
+.sakura-petal-cv {
+    pointer-events: none
+}
+
+
 /* =========================================================================
    2. Reset & Base
    ========================================================================= */
@@ -67,14 +135,17 @@
     box-sizing: border-box
 }
 
+/* Typography - Usando 'Inter' como fallback principal */
 body {
+    /* Eliminada la duplicación de font-family que estaba en el bloque combinado */
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: var(--cream);
     line-height: 1.6;
     overflow-x: hidden;
-    color: var(--black);
+    /* Eliminada la duplicación de color que estaba en el bloque combinado */
     cursor: default
 }
+
 
 /* =========================================================================
    3. Cursor
@@ -101,21 +172,21 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--magenta);
+    /* background-color ya en reglas combinadas */
     z-index: 9998;
     transition: transform .15s
 }
+
 
 /* =========================================================================
    4. Navigation
    ========================================================================= */
 
 nav {
-    position: fixed;
     top: 0;
     width: 100%;
     padding: 1.5rem 5%;
-    display: flex;
+    /* display: flex ya en reglas combinadas */
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
@@ -124,8 +195,7 @@ nav {
 }
 
 .logo {
-    display: flex;
-    color: var(--black);
+    /* display: flex y color ya en reglas combinadas */
     font-size: 1.5rem;
     font-weight: 700;
     align-items: center;
@@ -142,13 +212,14 @@ nav {
 }
 
 .petal {
-    position: absolute;
     width: 12px;
     height: 12px;
-    background-color: var(--magenta);
+    /* background-color ya en reglas combinadas */
     border-radius: 50% 0;
     opacity: .8;
 }
+
+/* Se corrige la sintaxis rota, eliminando "=======left: 50%;" y moviendo el @keyframes */
 
 .petal:hover {
     background-color: #f787ac
@@ -161,7 +232,6 @@ nav {
 }
 
 .petal:nth-child(2) {
-    top: 48%;
     right: 0;
     transform: translate(0, -50%) rotate(72deg)
 }
@@ -184,16 +254,7 @@ nav {
     transform: translate(0, -50%) rotate(288deg)
 }
 
-.center {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background-color: var(--cream);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-}
+/* .center ya definido en reglas combinadas */
 
 @keyframes float {
 
@@ -217,14 +278,12 @@ nav {
 .nav-links a {
     text-decoration: none;
     font-weight: 500;
-    color: var(--black);
+    /* color ya en reglas combinadas */
     transition: color .3s;
     position: relative
 }
 
-.nav-links a:hover {
-    color: var(--magenta)
-}
+/* .nav-links a:hover ya en reglas combinadas */
 
 .nav-links a::after {
     content: '';
@@ -319,17 +378,16 @@ nav {
 }
 
 /* =========================================================================
-   5. Hero Section
+5. Hero Section
    ========================================================================= */
 
 .hero {
-    min-height: 100vh;
+    /* min-height y overflow ya en reglas combinadas */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     padding: 0 5%;
-    overflow: hidden
 }
 
 .hero-content {
@@ -345,13 +403,14 @@ h1 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 800;
     margin-top: 0;
+
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero .highlight {
     display: inline-block;
-    color: var(--magenta);
+    /* color ya en reglas combinadas */
     will-change: text-shadow
 }
 
@@ -426,12 +485,13 @@ h1 {
     }
 }
 
+
 /* =========================================================================
    6. Sections
    ========================================================================= */
 
 section {
-    min-height: 100vh;
+    /* min-height ya en reglas combinadas */
     padding: 6rem 5%;
     display: flex;
     flex-direction: column;
@@ -459,56 +519,9 @@ section {
 /* About Section */
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: var(--gray);
-    line-height: 1.8
-}
-
-.about-text strong {
-    font-weight: 600;
-    color: var(--black)
-}
-
-/* About Image Container */
-.about-image-container {
-    width: 500px;
-    height: 500px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('../img/asas.webp');
-    transition: transform .8s ease-in-out;
-    cursor: pointer;
-    margin: 0 auto;
-    will-change: transform
-}
-
-.about-image-container:hover {
-    background-image: url('../img/osa_abiertos-sf.webp');
-    transform: scale(1.06) translateY(-10px)
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem
-}
-
-.project-card {
-    background: #fff;
-    border-radius: 15px;
     transition: transform .3s, box-shadow .3s, border-color .3s;
     border: 2px solid transparent;
-    overflow: hidden;
+    /* overflow ya en reglas combinadas */
     will-change: transform
 }
 
@@ -561,7 +574,7 @@ section {
 }
 
 .coming-soon-card {
-    border: 2px solid #ccc;
+    border: 2px #ccc;
     opacity: .85;
     text-align: center;
     padding: 24px;
@@ -609,18 +622,49 @@ section {
     height: 50px
 }
 
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: .75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    font-family: inherit
+}
+
+.contact-form button {
+    padding: .75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--magenta);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .3s, color .3s
+}
+
+.contact-form button:hover {
+    background-color: var(--black);
+    color: var(--magenta)
+}
+
 /* Footer */
 footer {
-    padding: 2rem 5%;
+    /* padding ya en reglas combinadas */
     text-align: center;
     color: var(--gray);
     border-top: 1px solid rgba(0, 0, 0, .1)
 }
 
-/* =========================================================================
-   7. Dog Delivery Animation
-   ========================================================================= */
-
+/* Dog Delivery Animation */
 .dog-delivery {
     position: fixed;
     bottom: 100px;
@@ -774,6 +818,79 @@ footer {
     transform: rotate(10deg) scaleX(-1)
 }
 
+.dog-body {
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    background-color: #faf6f1;
+    border-radius: 50%;
+    top: 40px;
+    left: 20px;
+    border: 3px solid var(--black)
+}
+
+.dog-body-spot {
+    background-color: #8b6f47;
+    width: 15px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 5px
+}
+
+.dog-paw {
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    background-color: #faf6f1;
+    border: 2px solid var(--black);
+    border-radius: 0 0 50% 50%;
+    bottom: 0;
+    left: 30px
+}
+
+.dog-paw-pad {
+    width: 6px;
+    height: 6px;
+    background-color: #8b6f47;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.dog-back-paw {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background-color: #faf6f1;
+    border: 2px solid var(--black);
+    border-radius: 0 0 50% 50%;
+    bottom: 0
+}
+
+.dog-back-paw.left {
+    left: 15px
+}
+
+.dog-back-paw.right {
+    right: 15px
+}
+
+.dog-tail {
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    background-color: #faf6f1;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    top: 50px;
+    left: -5px;
+    transform: rotate(-30deg)
+}
+
 .cv-paper {
     position: absolute;
     top: 30px;
@@ -859,10 +976,7 @@ footer {
     transform: scale(1.05)
 }
 
-/* =========================================================================
-   8. Reveal Animation
-   ========================================================================= */
-
+/* Reveal Animation */
 .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -874,17 +988,14 @@ footer {
     transform: translateY(0)
 }
 
-/* =========================================================================
-   9. Falling Flowers & Effects
-   ========================================================================= */
-
+/* Falling Flowers */
 .falling-flower {
-    position: fixed;
+    /* position ya en reglas combinadas */
     width: 20px;
     height: 20px;
     z-index: 9999;
     animation: 2.5s ease-in forwards fall;
-    pointer-events: none
+    /* pointer-events ya en reglas combinadas */
 }
 
 .falling-petal {
@@ -892,7 +1003,7 @@ footer {
     width: 8px;
     height: 8px;
     border-radius: 50% 0;
-    background-color: var(--magenta);
+    /* background-color ya en reglas combinadas */
     opacity: .9
 }
 
@@ -932,9 +1043,7 @@ footer {
     height: 4px;
     background-color: var(--cream);
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+    /* top, left, transform ya en reglas combinadas */
 }
 
 @keyframes fall {
@@ -949,65 +1058,11 @@ footer {
     }
 }
 
-/* Bark Effect */
-.bark {
-    position: fixed;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--black);
-    z-index: 9999;
-    animation: 1.5s ease-out forwards barkFloat;
-    pointer-events: none
-}
-
-@keyframes barkFloat {
-    0% {
-        transform: translateY(0) translateX(0) scale(1);
-        opacity: 1
-    }
-
-    100% {
-        transform: translateY(-100px) translateX(var(--random-x)) scale(1.5);
-        opacity: 0
-    }
-}
-
-/* Sakura Rain CV */
-.sakura-cv {
-    position: fixed;
-    width: 15px;
-    height: 15px;
-    z-index: 9999;
-    animation: 4s ease-in forwards sakuraFall;
-    pointer-events: none
-}
-
-.sakura-petal-cv {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background-color: var(--magenta);
-    border-radius: 50% 0;
-    opacity: .8
-}
-
-@keyframes sakuraFall {
-    0% {
-        transform: translateY(0) translateX(0) rotate(0);
-        opacity: 1
-    }
-
-    100% {
-        transform: translateY(100vh) translateX(var(--random-x)) rotate(720deg);
-        opacity: 0
-    }
-}
-
 /* =========================================================================
-   10. Responsive Design
+   7. Responsive Design
    ========================================================================= */
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .projects-grid {
         grid-template-columns: 1fr
     }
@@ -1025,7 +1080,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     nav {
         padding: 1.5rem 5%
     }
@@ -1073,17 +1128,14 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
     .projects-grid {
         grid-template-columns: 1fr
     }
 }
 
-/* =========================================================================
-   11. Performance Optimizations
-   ========================================================================= */
-
-@media (prefers-reduced-motion: reduce) {
+/* Performance Optimizations */
+@media (prefers-reduced-motion:reduce) {
 
     *,
     *::before,

@@ -9,7 +9,17 @@
     <meta name="theme-color" content="#E91E8C" />
     <title>Nellys Mata - Desarrolladora Web | Portfolio</title>
 
+    <!-- Preconnect para recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload fuentes críticas -->
+    <link rel="preload" href="estilos/fonts/ZenKakuGothicNew-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="estilos/fonts/ZenKakuGothicNew-Bold.ttf" as="font" type="font/ttf" crossorigin>
+
     <meta name="google-site-verification" content="FhXOay9AP26ijwbrH17562tlcY3cXiD8qdkBBnuujzw" />
+
+    <!-- Critical CSS inline -->
     <style>
         * {
             margin: 0;
@@ -25,7 +35,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background-color: var(--cream);
             line-height: 1.6;
             overflow-x: hidden;
@@ -59,11 +69,13 @@
         }
     </style>
 
+    <!-- Cargar CSS de forma asíncrona -->
     <link rel="stylesheet" href="estilos/style.css" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="/estilos/style.css?v=1.0.0">
+        <link rel="stylesheet" href="estilos/style.css">
     </noscript>
 
+    <!-- Favicons optimizados -->
     <link rel="icon" href="img/sakura.webp" type="image/webp" sizes="32x32">
     <link rel="apple-touch-icon" href="img/sakura.webp">
     <link rel="shortcut icon" href="img/sakura.png" type="image/x-icon">
@@ -270,7 +282,8 @@
         </section>
     </main>
 
-    <script src="/js/script.js?v=1.0.0"></script>
+    <!-- Script con defer para carga optimizada -->
+    <script src="js/script.js" defer></script>
 
 </body>
 

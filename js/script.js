@@ -350,14 +350,6 @@ const initLazyLoad = () => {
     }
 };
 
-
-// ======================= DOM READY =======================
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-} else {
-    init();
-}
-
 // ======================= PERFORMANCE MONITORING (Optional) =======================
 if ('PerformanceObserver' in window) {
     const perfObserver = new PerformanceObserver((list) => {
@@ -374,3 +366,19 @@ if ('PerformanceObserver' in window) {
         // Silently fail if not supported
     }
 }
+
+// ======================= INITIALIZATION =======================
+// Initialize all features when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initCursor();
+    initSmoothScroll();
+    initSakuraLogo();
+    initMenu();
+    initCVDelivery();
+    initScrollReveal();
+    initHighlightEffect();
+    initLazyLoad();
+});
+
+// Also make downloadCV available globally for onclick handlers
+window.downloadCV = downloadCV;
