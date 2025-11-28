@@ -296,47 +296,6 @@ const initScrollReveal = () => {
     reveals.forEach(reveal => revealObserver.observe(reveal));
 };
 
-// ======================= EMAILJS FORM =======================
-const initContactForm = () => {
-    // Wait for EmailJS to load
-    if (typeof emailjs === 'undefined') {
-        console.warn('EmailJS not loaded yet');
-        return;
-    }
-
-    emailjs.init("RKV08n414RJKfVher");
-
-    const form = document.getElementById("contact-form");
-    const feedback = document.getElementById("form-status");
-
-    if (!form || !feedback) return;
-
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Enviando...";
-        feedback.textContent = "";
-
-        try {
-            await emailjs.sendForm("service_portfolio", "template_contact", form);
-            feedback.textContent = "¡Mensaje enviado con éxito! 🎉";
-            feedback.style.color = "var(--magenta)";
-            form.reset();
-            createSakuraRain();
-        } catch (error) {
-            feedback.textContent = "Ocurrió un error. Por favor, intenta de nuevo.";
-            feedback.style.color = "red";
-            console.error("EmailJS error:", error);
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-        }
-    });
-};
 
 // ======================= CLOSE THANK YOU MESSAGE =======================
 window.closeThankYouMessage = () => {
@@ -391,33 +350,6 @@ const initLazyLoad = () => {
     }
 };
 
-// ======================= INIT ALL =======================
-const init = () => {
-    // Core functionality
-    initSmoothScroll();
-    initMenu();
-    initScrollReveal();
-    initLazyLoad();
-
-    // Interactive features
-    initSakuraLogo();
-    initCVDelivery();
-    initHighlightEffect();
-
-    // Desktop only
-    if (window.innerWidth >= 768) {
-        initCursor();
-    }
-
-    // EmailJS - wait for script to load
-    if (typeof emailjs !== 'undefined') {
-        initContactForm();
-    } else {
-        window.addEventListener('load', () => {
-            setTimeout(initContactForm, 1000);
-        });
-    }
-};
 
 // ======================= DOM READY =======================
 if (document.readyState === 'loading') {
