@@ -386,13 +386,18 @@ h1 {
     box-shadow: 0 5px 20px rgba(233, 30, 140, .3);
     cursor: pointer;
     transition: transform .3s, box-shadow .3s;
-    will-change: transform
+    will-change: transform;
 }
 
 .cta-button:hover,
 .cv-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(233, 30, 140, .5)
+}
+
+.claro {
+    background: white !important;
+    color: var(--magenta) !important;
 }
 
 /* Wave Animation */

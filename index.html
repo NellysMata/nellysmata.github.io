@@ -118,35 +118,12 @@
 
             <div class="hero-content">
                 <h2>Hola, soy <span class="highlight">Nellys Mata</span></h2>
+                <h3>Desarrolladora Front-end & UX/UI</h3>
                 <div class="cv-button-container">
-                    <a href="#contacto" class="cta-button">¿Hablamos?</a>
-                    <button class="cv-button" id="cvButton" aria-label="Descargar CV">
-                        <span aria-hidden="true">📄</span>
-                        <span>¡Píde mi CV al perrito!</span>
-                    </button>
+                    <a href="#proyectos" class="cta-button claro">Ver mis proyectos</a>
+                    <a href="#contacto" class="cta-button">Empecemos a colaborar</a>
+
                 </div>
-                <div class="dog-delivery" id="dogDelivery" style="display: none;" aria-hidden="true">
-                    <div class="dog">
-                        <div class="dog-ear left"></div>
-                        <div class="dog-ear right"></div>
-                        <div class="dog-head">
-                            <div class="dog-spot"></div>
-                            <div class="dog-eye left"></div>
-                            <div class="dog-eye right"></div>
-                            <div class="dog-snout">
-                                <div class="dog-nose"></div>
-                                <div class="dog-mouth"></div>
-                            </div>
-                        </div>
-                        <div class="cv-paper"></div>
-                    </div>
-                </div>
-                <div class="thank-you-message" id="thankYouMessage" role="alert" aria-live="polite">
-                    <h3>¡Gracias por tu interés! 🐾</h3>
-                    <p>El CV se está descargando...</p>
-                    <button onclick="closeThankYouMessage()" aria-label="Cerrar mensaje">Cerrar</button>
-                </div>
-            </div>
         </section>
 
         <section id="sobre-mi">
@@ -154,22 +131,28 @@
             <div class="about-content">
                 <div class="about-text reveal">
                     <p>
-                        Soy <strong>Desarrolladora de Aplicaciones Web (DAW)</strong> con una pasión genuina
-                        por crear experiencias digitales que marquen la diferencia.
+                        Mi especialidad es convertir estrategias digitales y principios UX en soluciones web robustas y
+                        funcionales (HTML, CSS, JavaScript) Aporto una sólida experiencia en gestión
+                        comercial y analítica
+                        de ventas para impulsar la conversión y optimizar la experiencia del usuario (CRO).
                     </p>
                     <p>
-                        Mi viaje en el desarrollo comenzó con un <strong>bootcamp de desarrollo web</strong>, donde
-                        descubrí mi amor por el código y el diseño. Desde entonces, he estado perfeccionando mis
-                        habilidades en tecnologías como HTML, CSS, JavaScript, Java, PHP y más.
+                        Mi trayectoria despegó con un <strong>Bootcamp de Desarrollo Web</strong>, donde descubrí mi
+                        pasión por
+                        transformar el código en soluciones visuales y funcionales. Desde entonces, he cultivado y
+                        perfeccionado mis habilidades como <strong>Desarrolladora Front-end</strong>, enfocada en la
+                        robustez y la
+                        excelencia técnica.
                     </p>
                     <p>
                         Cuando no estoy programando, me encontrarás explorando la cultura asiática, disfrutando del
                         anime, o buscando inspiración entre la playa y la montaña. Creo que la creatividad y la
-                        naturaleza son esenciales para crear código con alma.
+                        naturaleza son esenciales para crear código real.
                     </p>
                     <p>
-                        <strong>Busco mi primera oportunidad profesional</strong> donde pueda aportar mi entusiasmo,
-                        ganas de aprender y la perspectiva fresca que una persona comprometida como yo puede ofrecer.
+                        <strong> Busco mi primera oportunidad profesional</strong> en un equipo donde pueda aplicar mi
+                        visión
+                        técnica, entusiasmo y la perspectiva centrada en la conversión que he desarrollado.
                     </p>
                 </div>
                 <div class="about-image reveal">
@@ -178,7 +161,11 @@
                 </div>
             </div>
         </section>
-
+        <!-- <section class="project-tabs">
+            <button class="tab-btn active" data-tab="frontend">🥇 Desarrollo Frontend & UX/UI</button>
+            <button class="tab-btn" data-tab="core">🥈 Desarrollo Core & APIs</button>
+            <button class="tab-btn" data-tab="backend">🥉 Backend & BBDD</button>
+        </section> -->
         <section id="proyectos">
             <h2 class="section-title reveal">Mis proyectos</h2>
             <div class="projects-grid">
@@ -274,12 +261,39 @@
                     </a>
                 </div>
             </div>
-
-            <footer>
-                <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
-            </footer>
-        </section>
+            <div>
+                <button class="cv-button" id="cvButton" aria-label="Descargar CV">
+                    <span aria-hidden="true">📄</span>
+                    <span>¡Píde mi CV al perrito!</span>
+                </button>
+            </div>
+            <div class="dog-delivery" id="dogDelivery" style="display: none;" aria-hidden="true">
+                <div class="dog">
+                    <div class="dog-ear left"></div>
+                    <div class="dog-ear right"></div>
+                    <div class="dog-head">
+                        <div class="dog-spot"></div>
+                        <div class="dog-eye left"></div>
+                        <div class="dog-eye right"></div>
+                        <div class="dog-snout">
+                            <div class="dog-nose"></div>
+                            <div class="dog-mouth"></div>
+                        </div>
+                    </div>
+                    <div class="cv-paper"></div>
+                </div>
+            </div>
+            <div class="thank-you-message" id="thankYouMessage" role="alert" aria-live="polite">
+                <h3>¡Gracias por tu interés! 🐾</h3>
+                <p>El CV se está descargando...</p>
+                <button onclick="closeThankYouMessage()" aria-label="Cerrar mensaje">Cerrar</button>
+            </div>
     </main>
+    <footer>
+        <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
+    </footer>
+    </section>
+
 
     <!-- Script con defer para carga optimizada -->
     <script src="js/script.js" defer></script>
