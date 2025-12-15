@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Portfolio de Nellys Mata - Desarrolladora Web especializada en HTML, CSS, JavaScript, Java y PHP. Buscando mi primera oportunidad profesional." />
+    <meta name="description" content="Portfolio de Nellys Mata - Desarrolladora Web especializada en HTML, CSS, JavaScript, Java y PHP." />
     <meta name="theme-color" content="#E91E8C" />
-    <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -16,75 +14,25 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-PKXK6NFX');</script>
-    <!-- End Google Tag Manager -->
     <title>Nellys Mata - Desarrolladora Web | Portfolio</title>
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
-
-        :root {
-            --cream: #fff8fd87;
-            --magenta: #E91E8C;
-            --black: #1A1A1A;
-            --gray: #6B6B6B
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: var(--cream);
-            line-height: 1.6;
-            overflow-x: hidden;
-            color: var(--black)
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            background: linear-gradient(to bottom, var(--cream) 0, transparent 100%)
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 5%
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 3rem
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --cream: #fff8fd87; --magenta: #E91E8C; --black: #1A1A1A; --gray: #6B6B6B; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--cream); line-height: 1.6; overflow-x: hidden; color: var(--black); }
+        nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: linear-gradient(to bottom, var(--cream) 0, transparent 100%); }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 0 5%; }
+        .section-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 3rem; }
     </style>
 
-    <!-- Cargar CSS de forma asíncrona -->
     <link rel="stylesheet" href="estilos/style.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="estilos/style.css">
-    </noscript>
-
-    <!-- Favicons optimizados -->
+    <noscript><link rel="stylesheet" href="estilos/style.css"></noscript>
     <link rel="icon" href="img/sakura.webp" type="image/webp" sizes="32x32">
-    <link rel="apple-touch-icon" href="img/sakura.webp">
-    <link rel="shortcut icon" href="img/sakura.png" type="image/x-icon">
-
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKXK6NFX" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKXK6NFX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
     <header>
         <div class="cursor" aria-hidden="true"></div>
         <div class="cursor-follower" aria-hidden="true"></div>
@@ -92,168 +40,190 @@
         <nav role="navigation" aria-label="Navegación principal">
             <div class="logo">
                 <div class="sakura sakura-logo" aria-hidden="true">
-                    <div class="petal"></div>
-                    <div class="petal"></div>
-                    <div class="petal"></div>
-                    <div class="petal"></div>
-                    <div class="petal"></div>
-                    <div class="center"></div>
+                    <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="center"></div>
                 </div>
                 <span>{Nellys}</span>
             </div>
+            
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Mis proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#tarifas">Servicios</a></li> <li><a href="#contacto">Contacto</a></li>
             </ul>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 
-            <div class="menu menu-fullscreen" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+            <div class="menu menu-fullscreen" role="dialog" aria-modal="true">
                 <div class="menu-inner">
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#sobre-mi">Sobre mí</a></li>
                         <li><a href="#proyectos">Mis proyectos</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#tarifas">Servicios</a></li> <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <main>
         <h1>Portfolio nellys mata</h1>
+        
         <section class="hero" id="inicio">
             <div class="wave" aria-hidden="true"></div>
             <div class="wave" aria-hidden="true"></div>
-
             <div class="hero-content">
                 <h2>Hola, soy <span class="highlight">Nellys Mata</span></h2>
                 <h3>Desarrolladora Front-end & UX/UI</h3>
                 <div class="cv-button-container">
                     <a href="#proyectos" class="cta-button claro">Ver mis proyectos</a>
                     <a href="#contacto" class="cta-button">Empecemos a colaborar</a>
-
                 </div>
-        </section>
+            </div> </section>
 
         <section id="sobre-mi">
             <h2 class="section-title reveal">Sobre mí</h2>
             <div class="about-content">
                 <div class="about-text reveal">
-                    <p>
-                        Mi especialidad es convertir estrategias digitales y principios UX en soluciones web robustas y
-                        funcionales (HTML, CSS, JavaScript) Aporto una sólida experiencia en gestión
-                        comercial y analítica
-                        de ventas para impulsar la conversión y optimizar la experiencia del usuario (CRO).
-                    </p>
-                    <p>
-                        Mi trayectoria despegó con un <strong>Bootcamp de Desarrollo Web</strong>, donde descubrí mi
-                        pasión por
-                        transformar el código en soluciones visuales y funcionales. Desde entonces, he cultivado y
-                        perfeccionado mis habilidades como <strong>Desarrolladora Front-end</strong>, enfocada en la
-                        robustez y la
-                        excelencia técnica.
-                    </p>
-                    <p>
-                        Cuando no estoy programando, me encontrarás explorando la cultura asiática, disfrutando del
-                        anime, o buscando inspiración entre la playa y la montaña. Creo que la creatividad y la
-                        naturaleza son esenciales para crear código real.
-                    </p>
-                    <p>
-                        <strong> Busco mi primera oportunidad profesional</strong> en un equipo donde pueda aplicar mi
-                        visión
-                        técnica, entusiasmo y la perspectiva centrada en la conversión que he desarrollado.
-                    </p>
+                    <p>Mi especialidad es convertir estrategias digitales y principios UX en soluciones web robustas...</p>
+                    <p>Mi trayectoria despegó con un <strong>Bootcamp de Desarrollo Web</strong></p>
+                    <p>Cuando no estoy programando, me encontrarás explorando la cultura asiática.</p>
+                    <p><strong> Busco oportunidades profesionales</strong></p>
                 </div>
                 <div class="about-image reveal">
-                    <div class="about-image-container" role="img" aria-label="Ilustración de Nellys Mata">
-                    </div>
+                    <div class="about-image-container" role="img" aria-label="Ilustración de Nellys Mata"></div>
                 </div>
             </div>
         </section>
-        <!-- <section class="project-tabs">
-            <button class="tab-btn active" data-tab="frontend">🥇 Desarrollo Frontend & UX/UI</button>
-            <button class="tab-btn" data-tab="core">🥈 Desarrollo Core & APIs</button>
-            <button class="tab-btn" data-tab="backend">🥉 Backend & BBDD</button>
-        </section> -->
+
         <section id="proyectos">
             <h2 class="section-title reveal">Mis proyectos</h2>
             <div class="projects-grid">
                 <article class="project-card reveal">
                     <div class="project-image" aria-hidden="true">🌸</div>
                     <div class="project-content">
-                        <h3>Sakura Tasks </h3>
-                        <p>He creado una aplicación web para gestión de tareas con un diseño minimalista
-                            inspirado en el estilo de mi portfolio. Incluye prioridades,
-                            filtros y persistencia de datos.</p>
-                        <div class="project-links">
-                            <a href="proyectos/SakuraTasks/sakuratasks.html" target="_blank" class="project-link">Ver
-                                demo→</a>
-                        </div>
+                        <h3>Sakura Tasks</h3>
+                        <p>App de gestión de tareas con diseño minimalista.</p>
+                        <div class="project-links"><a href="#" class="project-link">Ver demo →</a></div>
                     </div>
                 </article>
                 <article class="project-card reveal">
                     <div class="project-image" aria-hidden="true">🎨</div>
                     <div class="project-content">
-                        <h3>Sakura clima</h3>
-                        <p>He desarrollado una aplicación web para controlar el clima, está conectada con una API del
-                            clima,
-                            tiene un diseño minimalista siguiendo con el estilo de mi portfolio. .</p>
-                        <div class="project-links">
-                            <a href="proyectos/Sakuraclima/index.html" target="_blank" class="project-link">Ver demo
-                                →</a>
-                        </div>
+                        <h3>Sakura Clima</h3>
+                        <p>App del clima conectada a API externa.</p>
+                        <div class="project-links"><a href="#" class="project-link">Ver demo →</a></div>
                     </div>
                 </article>
                 <article class="project-card reveal">
                     <div class="project-image" aria-hidden="true">🚀</div>
                     <div class="project-content">
                         <h3>Sakura Calculadora</h3>
-                        <p>Sakura Calculadora** es una calculadora web con una estética inspirada en la flor de cerezo
-                        </p>
-                        <div class="project-links">
-                            <a href="proyectos/Sakura Calculadora/index.html" target="_blank" class="project-link">Ver
-                                demo →</a>
-                        </div>
+                        <p>Calculadora web con estética flor de cerezo.</p>
+                        <div class="project-links"><a href="#" class="project-link">Ver demo →</a></div>
                     </div>
                 </article>
                 <article class="project-card reveal">
-                    <div class="project-image" aria-hidden="true">🚀</div>
+                    <div class="project-image" aria-hidden="true">🔮</div>
                     <div class="project-content">
-                        <h3>Sakura Horoscopo</h3>
-                        <p>Sakura Horoscopo es una aplicación web que muestra el horoscopo diario de una persona.
-                        </p>
-                        <div class="project-links">
-                            <a href="proyectos/Sakura Horoscopo/index.html" target="_blank" class="project-link">Ver
-                                demo →</a>
-                        </div>
+                        <h3>Sakura Horóscopo</h3>
+                        <p>Horóscopo diario interactivo.</p>
+                        <div class="project-links"><a href="#" class="project-link">Ver demo →</a></div>
                     </div>
                 </article>
             </div>
+            
             <article class="project-card reveal coming-soon-card">
                 <div class="project-image" aria-hidden="true">🚧</div>
                 <div class="project-content">
                     <h3>Proyectos en Desarrollo</h3>
-                    <p>
-                        Actualmente estoy trabajando en nuevos proyectos que pronto añadiré aquí.
-                        <br>
-                        Mi enfoque está en
-                        explorar la integración de APIs avanzadas y el desarrollo de aplicaciones
-                        <strong>full-stack</strong>.
-                    </p>
-                    <p>
-                        ¡Mantente atento/a para ver las próximas novedades!
-                    </p>
+                    <p>Explorando Full-stack y nuevas APIs.</p>
                     <div class="project-links">
-                        <a href="https://github.com/nellysmata" target="_blank" rel="noopener noreferrer"
-                            class="project-link">Ver mi GitHub →</a>
+                        <a href="https://github.com/nellysmata" target="_blank" class="project-link">Ver mi GitHub →</a>
                     </div>
                 </div>
             </article>
+        </section>
+
+        <section id="tarifas" class="seccion-tarifas reveal">
+            <div class="container">
+                <h2 class="section-title">Planes y Servicios</h2> <p class="subtitulo-seccion">Soluciones adaptadas a cada etapa de tu negocio</p>
+        
+                <div class="servicios-grid">
+                    <div class="servicio-card">
+                        <div class="card-header">
+                            <span class="servicio-icon">🌸</span>
+                            <h3>Webs / Landing</h3>
+                            <p class="servicio-descripcion-corta">Ideal para marcas personales.</p>
+                        </div>
+                        <div class="paquetes-container">
+                            <div class="paquete-card">
+                                <div class="paquete-header"><span class="paquete-titulo">Start</span><span class="paquete-precio">50-70 €</span></div>
+                                <ul class="paquete-lista"><li>1 página (Landing)</li><li>Formulario contacto</li><li>Diseño responsive</li></ul>
+                            </div>
+                            <div class="paquete-card destacado">
+                                <div class="paquete-tag">Recomendado</div>
+                                <div class="paquete-header"><span class="paquete-titulo">Pro</span><span class="paquete-precio">120-150 €</span></div>
+                                <ul class="paquete-lista"><li>2-3 páginas</li><li>Velocidad optimizada</li><li>Branding coherente</li></ul>
+                            </div>
+                            <div class="paquete-card">
+                                <div class="paquete-header"><span class="paquete-titulo">Complete</span><span class="paquete-precio">200-250 €</span></div>
+                                <ul class="paquete-lista"><li>3-5 páginas + SEO</li><li>Integración Redes</li><li>Diseño a medida</li></ul>
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="#contacto" class="cta-boton">Solicitar Web</a></div>
+                    </div>
+        
+                    <div class="servicio-card">
+                        <div class="card-header">
+                            <span class="servicio-icon">🎨</span>
+                            <h3>Apps Funcionales</h3>
+                            <p class="servicio-descripcion-corta">Herramientas interactivas.</p>
+                        </div>
+                        <div class="paquetes-container">
+                            <div class="paquete-card">
+                                <div class="paquete-header"><span class="paquete-titulo">Mini App</span><span class="paquete-precio">50-70 €</span></div>
+                                <ul class="paquete-lista"><li>1 funcionalidad</li><li>Interfaz simple</li><li>Ej: Calculadora</li></ul>
+                            </div>
+                            <div class="paquete-card destacado">
+                                <div class="paquete-tag">Popular</div>
+                                <div class="paquete-header"><span class="paquete-titulo">App Pro</span><span class="paquete-precio">120-150 €</span></div>
+                                <ul class="paquete-lista"><li>1-2 funcionalidades</li><li>Datos locales (JSON)</li><li>Diseño limpio</li></ul>
+                            </div>
+                            <div class="paquete-card">
+                                <div class="paquete-header"><span class="paquete-titulo">App Completa</span><span class="paquete-precio">200-250 €</span></div>
+                                <ul class="paquete-lista"><li>Lógica compleja</li><li>Persistencia datos</li><li>UX/UI avanzado</li></ul>
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="#contacto" class="cta-boton">Solicitar App</a></div>
+                    </div>
+        
+                    <div class="servicio-card">
+                        <div class="card-header">
+                            <span class="servicio-icon">🚀</span>
+                            <h3>Contenido Redes</h3>
+                            <p class="servicio-descripcion-corta">Diseño gráfico para social media.</p>
+                        </div>
+                        <div class="paquetes-container">
+                            <div class="paquete-card">
+                                <div class="paquete-header"><span class="paquete-titulo">Pack Mini</span><span class="paquete-precio">30-40 €</span></div>
+                                <ul class="paquete-lista"><li>3 posts estáticos</li><li>Diseño profesional</li><li>Adaptado a marca</li></ul>
+                            </div>
+                            <div class="paquete-card destacado">
+                                <div class="paquete-tag">Best Seller</div>
+                                <div class="paquete-header"><span class="paquete-titulo">Pack Pro</span><span class="paquete-precio">60-80 €</span></div>
+                                <ul class="paquete-lista"><li>5 posts estáticos</li><li>Carrusel interactivo</li><li>Formato optimizado</li></ul>
+                            </div>
+                            <div class="paquete-card">
+                                <div class="paquete-header"><span class="paquete-titulo">Pack Completo</span><span class="paquete-precio">120-150 €</span></div>
+                                <ul class="paquete-lista"><li>8-10 posts + Banners</li><li>Carruseles</li><li>Pack de marca total</li></ul>
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="#contacto" class="cta-boton">Solicitar Diseño</a></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contacto">
@@ -261,57 +231,39 @@
             <div class="contact-content reveal">
                 <p>¿Tienes un proyecto en mente o simplemente quieres charlar? ¡Estaré encantada de escucharte!</p>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/nellysmata" target="_blank" rel="noopener noreferrer"
-                        class="social-link" title="LinkedIn" aria-label="Visitar perfil de LinkedIn">
-                        <img src="img/svg/icons-2.svg" alt="LinkedIn" width="40" height="40" loading="lazy">
-                    </a>
-                    <a href="https://github.com/nellysmata" target="_blank" rel="noopener noreferrer"
-                        class="social-link" title="GitHub" aria-label="Visitar perfil de GitHub">
-                        <img src="img/svg/icons.svg" alt="GitHub" width="40" height="40" loading="lazy">
-                    </a>
-                    <a href="#" onclick="downloadCV()" class="social-link" title="Descargar CV"
-                        aria-label="Descargar Curriculum Vitae">
-                        <img src="img/svg/cv.svg" alt="Curriculum Vitae" width="40" height="40" loading="lazy">
-                    </a>
+                    <a href="https://linkedin.com/in/nellysmata" target="_blank" class="social-link"><img src="img/svg/icons-2.svg" alt="LinkedIn"></a>
+                    <a href="https://github.com/nellysmata" target="_blank" class="social-link"><img src="img/svg/icons.svg" alt="GitHub"></a>
+                    <a href="#" onclick="downloadCV()" class="social-link"><img src="img/svg/cv.svg" alt="CV"></a>
                 </div>
             </div>
+            
             <div>
-                <button class="cv-button" id="cvButton" aria-label="Descargar CV">
-                    <span aria-hidden="true">📄</span>
-                    <span>¡Píde mi CV al perrito!</span>
+                <button class="cv-button" id="cvButton">
+                    <span aria-hidden="true">📄</span><span>¡Píde mi CV al perrito!</span>
                 </button>
             </div>
-            <div class="dog-delivery" id="dogDelivery" style="display: none;" aria-hidden="true">
+            <div class="dog-delivery" id="dogDelivery" style="display: none;">
                 <div class="dog">
-                    <div class="dog-ear left"></div>
-                    <div class="dog-ear right"></div>
+                    <div class="dog-ear left"></div><div class="dog-ear right"></div>
                     <div class="dog-head">
-                        <div class="dog-spot"></div>
-                        <div class="dog-eye left"></div>
-                        <div class="dog-eye right"></div>
-                        <div class="dog-snout">
-                            <div class="dog-nose"></div>
-                            <div class="dog-mouth"></div>
-                        </div>
+                        <div class="dog-spot"></div><div class="dog-eye left"></div><div class="dog-eye right"></div>
+                        <div class="dog-snout"><div class="dog-nose"></div><div class="dog-mouth"></div></div>
                     </div>
                     <div class="cv-paper"></div>
                 </div>
             </div>
-            <div class="thank-you-message" id="thankYouMessage" role="alert" aria-live="polite">
+            <div class="thank-you-message" id="thankYouMessage">
                 <h3>¡Gracias por tu interés! 🐾</h3>
                 <p>El CV se está descargando...</p>
-                <button onclick="closeThankYouMessage()" aria-label="Cerrar mensaje">Cerrar</button>
+                <button onclick="closeThankYouMessage()">Cerrar</button>
             </div>
+        </section> 
     </main>
+
     <footer>
         <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
     </footer>
-    </section>
 
-
-    <!-- Script con defer para carga optimizada -->
     <script src="js/script.js" defer></script>
-
 </body>
-
 </html>
