@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horóscopo Sakura | Tu Destino Florece</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🌸 Horóscopo Sakura 🌸</h1>
+            <p class="subtitle">Descubre lo que las estrellas tienen para ti</p>
+        </header>
+
+        <div id="zodiacSelection">
+            <div class="zodiac-grid">
+                <div class="zodiac-card" data-sign="aries" data-img="1_aries.png">
+                    <div class="zodiac-icon">
+                        <img src="img/1_aries.png" alt="Aries">
+                    </div>
+                    <div class="zodiac-name">Aries</div>
+                    <div class="zodiac-dates">21 Mar - 19 Abr</div>
+                </div>
+                <div class="zodiac-card" data-sign="tauro" data-img="2_tauro.png">
+                    <div class="zodiac-icon">
+                        <img src="img/2_tauro.png" alt="Tauro">
+                    </div>
+                    <div class="zodiac-name">Tauro</div>
+                    <div class="zodiac-dates">20 Abr - 20 May</div>
+                </div>
+                <div class="zodiac-card" data-sign="geminis" data-img="3_geminis.png">
+                    <div class="zodiac-icon">
+                        <img src="img/3_geminis.png" alt="Géminis">
+                    </div>
+                    <div class="zodiac-name">Géminis</div>
+                    <div class="zodiac-dates">21 May - 20 Jun</div>
+                </div>
+                <div class="zodiac-card" data-sign="cancer" data-img="4_cancer.png">
+                    <div class="zodiac-icon">
+                        <img src="img/4_cancer.png" alt="Cáncer">
+                    </div>
+                    <div class="zodiac-name">Cáncer</div>
+                    <div class="zodiac-dates">21 Jun - 22 Jul</div>
+                </div>
+                <div class="zodiac-card" data-sign="leo" data-img="5_leo.png">
+                    <div class="zodiac-icon">
+                        <img src="img/5_leo.png" alt="Leo">
+                    </div>
+                    <div class="zodiac-name">Leo</div>
+                    <div class="zodiac-dates">23 Jul - 22 Ago</div>
+                </div>
+                <div class="zodiac-card" data-sign="virgo" data-img="6_virgo.png">
+                    <div class="zodiac-icon">
+                        <img src="img/6_virgo.png" alt="Virgo">
+                    </div>
+                    <div class="zodiac-name">Virgo</div>
+                    <div class="zodiac-dates">23 Ago - 22 Sep</div>
+                </div>
+                <div class="zodiac-card" data-sign="libra" data-img="7_libra.png">
+                    <div class="zodiac-icon">
+                        <img src="img/7_libra.png" alt="Libra">
+                    </div>
+                    <div class="zodiac-name">Libra</div>
+                    <div class="zodiac-dates">23 Sep - 22 Oct</div>
+                </div>
+                <div class="zodiac-card" data-sign="escorpio" data-img="8_escorpio.png">
+                    <div class="zodiac-icon">
+                        <img src="img/8_escorpio.png" alt="Escorpio">
+                    </div>
+                    <div class="zodiac-name">Escorpio</div>
+                    <div class="zodiac-dates">23 Oct - 21 Nov</div>
+                </div>
+                <div class="zodiac-card" data-sign="sagitario" data-img="9_sagitario.png">
+                    <div class="zodiac-icon">
+                        <img src="img/9_sagitario.png" alt="Sagitario">
+                    </div>
+                    <div class="zodiac-name">Sagitario</div>
+                    <div class="zodiac-dates">22 Nov - 21 Dic</div>
+                </div>
+                <div class="zodiac-card" data-sign="capricornio" data-img="10_capricornio.png">
+                    <div class="zodiac-icon">
+                        <img src="img/10_capricornio.png" alt="Capricornio">
+                    </div>
+                    <div class="zodiac-name">Capricornio</div>
+                    <div class="zodiac-dates">22 Dic - 19 Ene</div>
+                </div>
+                <div class="zodiac-card" data-sign="acuario" data-img="11_acuario.png">
+                    <div class="zodiac-icon">
+                        <img src="img/11_acuario.png" alt="Acuario">
+                    </div>
+                    <div class="zodiac-name">Acuario</div>
+                    <div class="zodiac-dates">20 Ene - 18 Feb</div>
+                </div>
+                <div class="zodiac-card" data-sign="piscis" data-img="12_piscis.png">
+                    <div class="zodiac-icon">
+                        <img src="img/12_piscis.png" alt="Piscis">
+                    </div>
+                    <div class="zodiac-name">Piscis</div>
+                    <div class="zodiac-dates">19 Feb - 20 Mar</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="horoscopeDisplay" class="horoscope-display hidden">
+            <div class="placeholder">
+                Selecciona tu signo zodiacal para conocer tu horóscopo ✨
+            </div>
+        </div>
+
+        <footer>
+            <p>Creado con 💖 por <a href="https://github.com/nellysmata">Nellys Mata</a></p>
+            <p>En colaboración con: <a href="https://github.com/aialabrrgn">Aialabrrgn (Bamfer)</a></p>
+        </footer>
+        <script src="script.js"></script>
+    </div>
+
+
+    <!-- Back to EneDigital -->
+    <a href="../../index.html" style="position:fixed; bottom:20px; right:20px; background:#E91E8C; color:white; padding:10px 20px; border-radius:50px; text-decoration:none; font-family:sans-serif; font-weight:bold; box-shadow:0 4px 15px rgba(233, 30, 140, 0.4); z-index:9999; display:flex; align-items:center; gap:8px; font-size:14px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <span>←</span> Volver a EneDigital
+    </a>
+</body>
+
+</html>

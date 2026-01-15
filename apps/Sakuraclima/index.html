@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Clima - El clima en armonía</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Efecto de lluvia -->
+    <div class="rain-container" id="rainContainer"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🌸</div>
+            <h1 class="app-title">Sakura Clima</h1>
+        </div>
+
+        <!-- Búsqueda -->
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" id="cityInput" placeholder="Buscar ciudad..."
+                    autocomplete="off">
+                <button class="search-btn" id="searchBtn">🔍</button>
+            </div>
+            <div class="error" id="errorMsg"></div>
+        </div>
+
+        <!-- Tarjeta del clima -->
+        <div class="weather-card" id="weatherCard" style="display:none;">
+            <h2 class="city-name" id="cityName">---</h2>
+            <p class="date" id="date">---</p>
+
+            <div class="weather-icon" id="weatherIcon">🌤️</div>
+            <div class="temperature" id="temperature">--°</div>
+            <p class="weather-description" id="description">---</p>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div class="detail-icon">💨</div>
+                    <div class="detail-label">Viento</div>
+                    <div class="detail-value" id="wind">-- km/h</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">💧</div>
+                    <div class="detail-label">Humedad</div>
+                    <div class="detail-value" id="humidity">--%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🌡️</div>
+                    <div class="detail-label">Sensación</div>
+                    <div class="detail-value" id="feelsLike">--°</div>
+                </div>
+            </div>
+
+            <div class="haiku">
+                <p class="haiku-text" id="haiku">
+                    El viento susurra,<br>
+                    nubes danzan en el cielo,<br>
+                    la lluvia descansa.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Hecho con 💜 por NellysMata | Datos de OpenWeatherMap
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Back to EneDigital -->
+    <a href="../../index.html" style="position:fixed; bottom:20px; right:20px; background:#E91E8C; color:white; padding:10px 20px; border-radius:50px; text-decoration:none; font-family:sans-serif; font-weight:bold; box-shadow:0 4px 15px rgba(233, 30, 140, 0.4); z-index:9999; display:flex; align-items:center; gap:8px; font-size:14px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <span>←</span> Volver a EneDigital
+    </a>
+</body>
+
+</html>

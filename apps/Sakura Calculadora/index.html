@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <!-- Flores decorativas -->
+        <div class="bg-flower">🌸</div>
+        <div class="bg-flower">🌸</div>
+        <div class="bg-flower">🌸</div>
+
+        <div class="calculator-container">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">🌸</div>
+                <h1 class="title">Sakura Calculadora</h1>
+            </div>
+
+            <!-- Calculadora -->
+            <div class="calculator">
+                <!-- Display -->
+                <div class="display">
+                    <div class="previous-operand" id="previousOperand"></div>
+                    <div class="current-operand" id="currentOperand">0</div>
+                </div>
+
+                <!-- Botones -->
+                <div class="buttons">
+                    <button class="btn btn-clear" data-action="clear">AC</button>
+                    <button class="btn btn-delete" data-action="delete">DEL</button>
+                    <button class="btn btn-operator" data-operator="÷">÷</button>
+
+                    <button class="btn btn-number" data-number="7">7</button>
+                    <button class="btn btn-number" data-number="8">8</button>
+                    <button class="btn btn-number" data-number="9">9</button>
+                    <button class="btn btn-operator" data-operator="×">×</button>
+
+                    <button class="btn btn-number" data-number="4">4</button>
+                    <button class="btn btn-number" data-number="5">5</button>
+                    <button class="btn btn-number" data-number="6">6</button>
+                    <button class="btn btn-operator" data-operator="-">-</button>
+
+                    <button class="btn btn-number" data-number="1">1</button>
+                    <button class="btn btn-number" data-number="2">2</button>
+                    <button class="btn btn-number" data-number="3">3</button>
+                    <button class="btn btn-operator" data-operator="+">+</button>
+
+                    <button class="btn btn-number btn-zero" data-number="0">0</button>
+                    <button class="btn btn-number btn-zero-zero" data-number="00">00</button>
+                    <button class="btn btn-number btn-punto" data-number=".">.</button>
+                    <button class="btn btn-equals" data-action="equals">=</button>
+                </div>
+
+                <!-- Historial -->
+                <div class="history">
+                    <div class="history-title">📝 Historial</div>
+                    <div id="historyList"></div>
+                    <button class="clear-history" id="clearHistory">Limpiar historial</button>
+                </div>
+            </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        Hecho con 💜 por <a href="../portfolio/index.html" target="_blank" class="enlace">Nellys Mata</a> | Presiona
+        teclas para
+        calcular
+    </footer>
+    <script src="script.js"></script>
+    <!-- Back to EneDigital -->
+    <a href="../../index.html" style="position:fixed; bottom:20px; right:20px; background:#E91E8C; color:white; padding:10px 20px; border-radius:50px; text-decoration:none; font-family:sans-serif; font-weight:bold; box-shadow:0 4px 15px rgba(233, 30, 140, 0.4); z-index:9999; display:flex; align-items:center; gap:8px; font-size:14px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <span>←</span> Volver a EneDigital
+    </a>
+</body>
+
+</html>

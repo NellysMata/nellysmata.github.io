@@ -1,269 +1,457 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Nellys Mata - Desarrolladora Web especializada en HTML, CSS, JavaScript, Java y PHP." />
-    <meta name="theme-color" content="#E91E8C" />
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PKXK6NFX');</script>
-    <title>Nellys Mata - Desarrolladora Web | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web Vitoria-Gasteiz | EneDigital</title>
+    <meta name="description" content="¿Buscas Diseño Web en Vitoria-Gasteiz? Especialista en Webs para Manicuristas, Peluquerías y Estética. Automatiza citas y vende más con tu web.">
     
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --cream: #fff8fd87; --magenta: #E91E8C; --black: #1A1A1A; --gray: #6B6B6B; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--cream); line-height: 1.6; overflow-x: hidden; color: var(--black); }
-        nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: linear-gradient(to bottom, var(--cream) 0, transparent 100%); }
-        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 0 5%; }
-        .section-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 3rem; }
-    </style>
-
-    <link rel="stylesheet" href="estilos/style.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="estilos/style.css"></noscript>
-    <link rel="icon" href="img/sakura.webp" type="image/webp" sizes="32x32">
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://enedigital.com/">
+    <meta property="og:title" content="Diseño Web Vitoria-Gasteiz | EneDigital">
+    <meta property="og:description" content="Diseño Web en Vitoria-Gasteiz. Automatización para negocios de belleza.">
+    <meta property="og:image" content=""> <!-- Add actual image URL if available -->
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKXK6NFX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
-    <header>
-        <div class="cursor" aria-hidden="true"></div>
-        <div class="cursor-follower" aria-hidden="true"></div>
 
-        <nav role="navigation" aria-label="Navegación principal">
-            <div class="logo">
-                <div class="sakura sakura-logo" aria-hidden="true">
-                    <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="center"></div>
-                </div>
-                <span>{Nellys}</span>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">EneDigital</a>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="https://wa.me/34687356467" class="btn-nav">HABLEMOS</a>
             </div>
-            
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Mis proyectos</a></li>
-                <li><a href="#tarifas">Servicios</a></li> <li><a href="#contacto">Contacto</a></li>
-            </ul>
+        </div>
+    </nav>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-
-            <div class="menu menu-fullscreen" role="dialog" aria-modal="true">
-                <div class="menu-inner">
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#sobre-mi">Sobre mí</a></li>
-                        <li><a href="#proyectos">Mis proyectos</a></li>
-                        <li><a href="#tarifas">Servicios</a></li> <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="hero">
+        <h1>Tu negocio en Vitoria necesita una web que <span style="color:var(--magenta)">traiga clientes</span></h1>
+        <p>Me llamo Nellys. No solo escribo código, creo sistemas de reservas que funcionan mientras tú descansas.</p>
+        <a href="#tarifas" class="btn-mega">QUIERO MI WEB</a>
     </header>
 
+    <div class="share-bar">
+        <button class="share-btn" onclick="sharePage('whatsapp')" aria-label="Compartir en Whatsapp"><i class="fa-brands fa-whatsapp"></i></button>
+        <button class="share-btn" onclick="sharePage('copy')" aria-label="Copiar enlace"><i class="fa-solid fa-link"></i></button>
+        <button class="share-btn" onclick="sharePage('linkedin')" aria-label="Compartir en LinkedIn"><i class="fa-brands fa-linkedin-in"></i></button>
+    </div>
+
     <main>
-        <h1>Portfolio nellys mata</h1>
-        
-        <section class="hero" id="inicio">
-            <div class="wave" aria-hidden="true"></div>
-            <div class="wave" aria-hidden="true"></div>
-            <div class="hero-content">
-                <h2>Hola, soy <span class="highlight">Nellys Mata</span></h2>
-                <h3>Desarrolladora Front-end & UX/UI</h3>
-                <div class="cv-button-container">
-                    <a href="#proyectos" class="cta-button claro">Ver mis proyectos</a>
-                    <a href="#contacto" class="cta-button">Empecemos a colaborar</a>
+        <section class="about" id="sobre-mi">
+            <div class="container about-flex">
+                <div style="flex: 1.2; min-width: 320px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; letter-spacing: -1px;">Ingeniería + Ventas 🛠️</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.2rem;">Soy <strong>Nellys Mata</strong>. Mi formación técnica me da la precisión, pero mis años en ventas me han enseñado lo más importante: <strong>las personas compran a personas.</strong></p>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.2rem;">En EneDigital no hay palabras raras. Te escucho, entiendo tu negocio y te entrego una herramienta que te haga la vida más fácil.</p>
                 </div>
-            </div> </section>
-
-        <section id="sobre-mi">
-            <h2 class="section-title reveal">Sobre mí</h2>
-            <div class="about-content">
-                <div class="about-text reveal">
-                    <p>Mi especialidad es convertir estrategias digitales y principios UX en soluciones web robustas...</p>
-                    <p>Mi trayectoria despegó con un <strong>Bootcamp de Desarrollo Web</strong></p>
-                    <p>Cuando no estoy programando, me encontrarás explorando la cultura asiática.</p>
-                    <p><strong> Busco oportunidades profesionales</strong></p>
-                </div>
-                <div class="about-image reveal">
-                    <div class="about-image-container" role="img" aria-label="Ilustración de Nellys Mata"></div>
+                <div class="profile-card">
+                    <span style="font-size: 5rem; display: block; margin-bottom: 1rem;">👩💻</span>
+                    <h3 style="font-size: 1.5rem;">Nellys Mata</h3>
+                    <p style="color:var(--magenta); font-weight:800; text-transform:uppercase; font-size:0.8rem;">Fundadora EneDigital</p>
                 </div>
             </div>
         </section>
 
-        <section id="proyectos">
-            <h2 class="section-title reveal">Mis proyectos</h2>
-            <div class="projects-grid">
-                <article class="project-card reveal">
-                    <div class="project-image" aria-hidden="true">🌸</div>
-                    <div class="project-content">
-                        <h3>Sakura Tasks</h3>
-                        <p>App de gestión de tareas con diseño minimalista.</p>
-                        <div class="project-links"><a href="#" class="project-link">Ver demo →</a></div>
-                    </div>
-                </article>
-                <article class="project-card reveal">
-                    <div class="project-image" aria-hidden="true">🎨</div>
-                    <div class="project-content">
-                        <h3>Sakura Clima</h3>
-                        <p>App del clima conectada a API externa.</p>
-                        <div class="project-links"><a href="#" class="project-link">Ver demo →</a></div>
-                    </div>
-                </article>
-                <article class="project-card reveal">
-                    <div class="project-image" aria-hidden="true">🚀</div>
-                    <div class="project-content">
-                        <h3>Sakura Calculadora</h3>
-                        <p>Calculadora web con estética flor de cerezo.</p>
-                        <div class="project-links"><a href="#" class="project-link">Ver demo →</a></div>
-                    </div>
-                </article>
-                <article class="project-card reveal">
-                    <div class="project-image" aria-hidden="true">🔮</div>
-                    <div class="project-content">
-                        <h3>Sakura Horóscopo</h3>
-                        <p>Horóscopo diario interactivo.</p>
-                        <div class="project-links"><a href="#" class="project-link">Ver demo →</a></div>
-                    </div>
-                </article>
-            </div>
-            
-            <article class="project-card reveal coming-soon-card">
-                <div class="project-image" aria-hidden="true">🚧</div>
-                <div class="project-content">
-                    <h3>Proyectos en Desarrollo</h3>
-                    <p>Explorando Full-stack y nuevas APIs.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/nellysmata" target="_blank" class="project-link">Ver mi GitHub →</a>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <section id="tarifas" class="seccion-tarifas reveal">
+        <!-- Services Section -->
+        <section class="services" style="padding: 4rem 1.5rem; background: var(--bg-body);">
             <div class="container">
-                <h2 class="section-title">Planes y Servicios</h2> <p class="subtitulo-seccion">Soluciones adaptadas a cada etapa de tu negocio</p>
-        
-                <div class="servicios-grid">
-                    <div class="servicio-card">
-                        <div class="card-header">
-                            <span class="servicio-icon">🌸</span>
-                            <h3>Webs / Landing</h3>
-                            <p class="servicio-descripcion-corta">Ideal para marcas personales.</p>
-                        </div>
-                        <div class="paquetes-container">
-                            <div class="paquete-card">
-                                <div class="paquete-header"><span class="paquete-titulo">Start</span><span class="paquete-precio">50-70 €</span></div>
-                                <ul class="paquete-lista"><li>1 página (Landing)</li><li>Formulario contacto</li><li>Diseño responsive</li></ul>
-                            </div>
-                            <div class="paquete-card destacado">
-                                <div class="paquete-tag">Recomendado</div>
-                                <div class="paquete-header"><span class="paquete-titulo">Pro</span><span class="paquete-precio">120-150 €</span></div>
-                                <ul class="paquete-lista"><li>2-3 páginas</li><li>Velocidad optimizada</li><li>Branding coherente</li></ul>
-                            </div>
-                            <div class="paquete-card">
-                                <div class="paquete-header"><span class="paquete-titulo">Complete</span><span class="paquete-precio">200-250 €</span></div>
-                                <ul class="paquete-lista"><li>3-5 páginas + SEO</li><li>Integración Redes</li><li>Diseño a medida</li></ul>
-                            </div>
-                        </div>
-                        <div class="card-footer"><a href="#contacto" class="cta-boton">Solicitar Web</a></div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    
+                    <!-- Card 1: Seguridad -->
+                    <div style="background: var(--bg-card); padding: 2rem; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">SOS Webs Hackeadas</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">¿Tu web ha sido infectada? No entres en pánico. Limpio malware, recupero accesos y blindo tu sitio para que no vuelva a pasar.</p>
                     </div>
-        
-                    <div class="servicio-card">
-                        <div class="card-header">
-                            <span class="servicio-icon">🎨</span>
-                            <h3>Apps Funcionales</h3>
-                            <p class="servicio-descripcion-corta">Herramientas interactivas.</p>
-                        </div>
-                        <div class="paquetes-container">
-                            <div class="paquete-card">
-                                <div class="paquete-header"><span class="paquete-titulo">Mini App</span><span class="paquete-precio">50-70 €</span></div>
-                                <ul class="paquete-lista"><li>1 funcionalidad</li><li>Interfaz simple</li><li>Ej: Calculadora</li></ul>
-                            </div>
-                            <div class="paquete-card destacado">
-                                <div class="paquete-tag">Popular</div>
-                                <div class="paquete-header"><span class="paquete-titulo">App Pro</span><span class="paquete-precio">120-150 €</span></div>
-                                <ul class="paquete-lista"><li>1-2 funcionalidades</li><li>Datos locales (JSON)</li><li>Diseño limpio</li></ul>
-                            </div>
-                            <div class="paquete-card">
-                                <div class="paquete-header"><span class="paquete-titulo">App Completa</span><span class="paquete-precio">200-250 €</span></div>
-                                <ul class="paquete-lista"><li>Lógica compleja</li><li>Persistencia datos</li><li>UX/UI avanzado</li></ul>
-                            </div>
-                        </div>
-                        <div class="card-footer"><a href="#contacto" class="cta-boton">Solicitar App</a></div>
+
+                    <!-- Card 2: Branding -->
+                    <div style="background: var(--bg-card); padding: 2rem; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎨</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Branding & Diseño</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Desde <strong>Canva</strong> hasta <strong>GIMP</strong>. Creo una identidad visual coherente para tu marca. Logos, paletas de color y posts para LinkedIn.</p>
                     </div>
-        
-                    <div class="servicio-card">
-                        <div class="card-header">
-                            <span class="servicio-icon">🚀</span>
-                            <h3>Contenido Redes</h3>
-                            <p class="servicio-descripcion-corta">Diseño gráfico para social media.</p>
+
+                    <!-- Card 3: Mantenimiento -->
+                    <div style="background: var(--bg-card); padding: 2rem; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔧</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Mantenimiento Web</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Una web es como un coche, necesita revisiones. Me encargo de actualizaciones y copias de seguridad para que tú solo vendas.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee Infinite Carousel (Tools) -->
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <span class="marquee-item">CANVA <i class="fa-solid fa-paintbrush"></i></span>
+                <span class="marquee-item">GIMP <i class="fa-solid fa-image"></i></span>
+                <span class="marquee-item">LINKEDIN <i class="fa-brands fa-linkedin"></i></span>
+                <span class="marquee-item">ESTRATEGIA <i class="fa-solid fa-chess"></i></span>
+                <span class="marquee-item">SEGURIDAD WEB <i class="fa-solid fa-shield-halved"></i></span>
+                <span class="marquee-item">BRANDING <i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <!-- Repetir -->
+                <span class="marquee-item">CANVA <i class="fa-solid fa-paintbrush"></i></span>
+                <span class="marquee-item">GIMP <i class="fa-solid fa-image"></i></span>
+                <span class="marquee-item">LINKEDIN <i class="fa-brands fa-linkedin"></i></span>
+                <span class="marquee-item">ESTRATEGIA <i class="fa-solid fa-chess"></i></span>
+            </div>
+        </div>
+
+        <section class="logros" id="logros">
+            <div class="container">
+                <h2 class="section-title">Maquetas y Proyectos</h2>
+                
+                <div class="projects-grid">
+                    
+                    <!-- Project New: EneNails -->
+                    <article class="project-card">
+                        <div class="project-img" style="background: #FFF0F5; font-size: 5rem;">💅</div>
+                        <div class="project-info">
+                            <span class="tag" style="background: #FFF0F5; color: #D81B60;">
+                                <i class="fa-solid fa-robot" style="margin-right:6px;"></i> SISTEMA AUTOMÁTICO
+                            </span>
+                            <h3 style="font-size: 1.8rem; margin: 0.5rem 0;">EneNails</h3>
+                            <p style="color:var(--text-secondary); margin-bottom: 1.5rem;">Gestión de citas inteligente para manicuristas. Adiós a los mensajes de WhatsApp sin fin.</p>
+                            <a href="https://ene-nails.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--magenta); font-weight:800; text-decoration:none;">VER DEMO →</a>
                         </div>
-                        <div class="paquetes-container">
-                            <div class="paquete-card">
-                                <div class="paquete-header"><span class="paquete-titulo">Pack Mini</span><span class="paquete-precio">30-40 €</span></div>
-                                <ul class="paquete-lista"><li>3 posts estáticos</li><li>Diseño profesional</li><li>Adaptado a marca</li></ul>
-                            </div>
-                            <div class="paquete-card destacado">
-                                <div class="paquete-tag">Best Seller</div>
-                                <div class="paquete-header"><span class="paquete-titulo">Pack Pro</span><span class="paquete-precio">60-80 €</span></div>
-                                <ul class="paquete-lista"><li>5 posts estáticos</li><li>Carrusel interactivo</li><li>Formato optimizado</li></ul>
-                            </div>
-                            <div class="paquete-card">
-                                <div class="paquete-header"><span class="paquete-titulo">Pack Completo</span><span class="paquete-precio">120-150 €</span></div>
-                                <ul class="paquete-lista"><li>8-10 posts + Banners</li><li>Carruseles</li><li>Pack de marca total</li></ul>
-                            </div>
+                    </article>
+
+                    <!-- Project 1: Sian -->
+                    <article class="project-card">
+                        <div class="project-img">💆‍♀️</div>
+                        <div class="project-info">
+                            <span class="tag" style="background: #e3f9eb; color: #15803d;">
+                                <i class="fa-solid fa-star" style="margin-right:6px;"></i> CASO DE ÉXITO
+                            </span>
+                            <h3 style="font-size: 1.8rem; margin: 0.5rem 0;">Sian Estética</h3>
+                            <p style="color:var(--text-secondary); margin-bottom: 1.5rem;">Web completa para salón de belleza. Diseño minimalista que transmite profesionalidad.</p>
+                            <a href="https://estetica-sian.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--magenta); font-weight:800; text-decoration:none;">VER WEB EN VIVO →</a>
                         </div>
-                        <div class="card-footer"><a href="#contacto" class="cta-boton">Solicitar Diseño</a></div>
+                    </article>
+
+                    <!-- Project 2: CroquiPan -->
+                    <article class="project-card">
+                        <div class="project-img" style="background: #FFF8E1; font-size: 5rem;">🥐</div>
+                        <div class="project-info">
+                            <span class="tag" style="background: #FFF8E1; color: #D4A017;">
+                                <i class="fa-solid fa-cart-shopping" style="margin-right:6px;"></i> ECOMMERCE
+                            </span>
+                            <h3 style="font-size: 1.8rem; margin: 0.5rem 0;">CroquiPan</h3>
+                            <p style="color:var(--text-secondary); margin-bottom: 1.5rem;">Tienda online para panadería artesanal. Un diseño crujiente que despierta el apetito.</p>
+                            <a href="https://croquipan.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--magenta); font-weight:800; text-decoration:none;">VER WEB EN VIVO →</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: EneSushi -->
+                    <article class="project-card">
+                        <div class="project-img" style="background: #1a1a1a; font-size: 5rem;">🍣</div>
+                        <div class="project-info">
+                            <span class="tag" style="background: #FFE5E5; color: #D32F2F;">
+                                <i class="fa-solid fa-utensils" style="margin-right:6px;"></i> RESTAURANTE
+                            </span>
+                            <h3 style="font-size: 1.8rem; margin: 0.5rem 0;">EneSushi</h3>
+                            <p style="color:var(--text-secondary); margin-bottom: 1.5rem;">Experiencia inmersiva para restaurante japonés. Carta digital moderna.</p>
+                            <a href="https://enesushi.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--magenta); font-weight:800; text-decoration:none;">VER WEB EN VIVO →</a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="socials" style="padding-bottom: 4rem;">
+            <div class="container">
+                <h2 class="section-title">Contenido & Estrategia</h2>
+                
+                <article class="project-card" style="background: white; border: 1px solid var(--border-color);">
+                    <!-- Visual side with gradients representing Insta/TikTok -->
+                    <div class="project-img" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white;">
+                        <div style="text-align:center;">
+                            <i class="fa-solid fa-camera-retro" style="font-size: 3.5rem; margin-bottom: 1rem; display:block;"></i>
+                            <span style="font-size: 1rem; font-weight: 700; opacity: 0.9;">GRABACIÓN + EDICIÓN</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <span class="tag" style="background: var(--magenta); color: white;">CREACIÓN DE MARCA ENEDIGITAL</span>
+                        <h3 style="font-size: 2rem; margin: 0.5rem 0;">Storytelling Visual</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            No es solo subir vídeos. Es conectar. Yo misma <strong>grabo, edito y gestiono</strong> toda la estrategia de contenidos. Humanizo la tecnología para acercarla a las personas.
+                        </p>
+                        
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://www.tiktok.com/@ene.digitalweb" target="_blank" rel="noopener noreferrer" class="btn-mega" style="background: #000; box-shadow: none; padding: 0.8rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">
+                                <i class="fa-brands fa-tiktok" style="margin-right:8px;"></i> Tik Tok
+                            </a>
+                            
+                            <a href="https://www.instagram.com/ene.digitalweb/" target="_blank" rel="noopener noreferrer" class="btn-mega" style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); box-shadow: none; padding: 0.8rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">
+                                <i class="fa-brands fa-instagram" style="margin-right:8px;"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="pricing" id="tarifas">
+            <div class="container">
+                <h2 class="section-title">Transparencia total</h2>
+                <div class="price-box">
+                    <div class="price-header">
+                        <div style="margin-bottom: 0.8rem;">
+                            <span style="background: var(--magenta); color: white; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px var(--magenta-glow);">
+                                🚀 Precio Lanzamiento
+                            </span>
+                        </div>
+                        <span style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">Pack Escaparate Pro</span>
+                        <div class="price-num">
+                            290€ <span style="font-size: 0.3em; font-weight: 500; color: var(--text-secondary); vertical-align: middle;">+ IVA</span>
+                        </div>
+                    </div>
+                    
+                    <div class="price-maintenance">
+                        <div style="font-size: 2.5rem;">♻️</div>
+                        <div>
+                            <div style="font-weight: 800; font-size: 1.2rem; color: var(--text-main);">+ 90€ / año</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.3;">Mantenimiento, Hosting y Dominio incluido</div>
+                        </div>
+                    </div>
+
+                    <div style="padding: 2rem;">
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check"></i> Diseño Premium Personalizado</li>
+                            <li><i class="fa-solid fa-check"></i> SEO Local (Vitoria-Gasteiz)</li>
+                            <li><i class="fa-solid fa-check"></i> Enlaces de pago/reserva</li>
+                            <li><i class="fa-solid fa-check"></i> Entrega en 7 días</li>
+                        </ul>
+                        <a href="https://wa.me/34687356467" class="btn-mega" style="width:100%; display:block;">RESERVAR AHORA</a>
+                        <p style="margin-top: 1.5rem; font-weight: 700; color: var(--magenta); font-size: 0.8rem;">⚠️ Solo 2 plazas este mes</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contacto">
-            <h2 class="section-title reveal">Contacto</h2>
-            <div class="contact-content reveal">
-                <p>¿Tienes un proyecto en mente o simplemente quieres charlar? ¡Estaré encantada de escucharte!</p>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/nellysmata" target="_blank" class="social-link"><img src="img/svg/icons-2.svg" alt="LinkedIn"></a>
-                    <a href="https://github.com/nellysmata" target="_blank" class="social-link"><img src="img/svg/icons.svg" alt="GitHub"></a>
-                    <a href="#" onclick="downloadCV()" class="social-link"><img src="img/svg/cv.svg" alt="CV"></a>
-                </div>
-            </div>
-            
-            <div>
-                <button class="cv-button" id="cvButton">
-                    <span aria-hidden="true">📄</span><span>¡Píde mi CV al perrito!</span>
-                </button>
-            </div>
-            <div class="dog-delivery" id="dogDelivery" style="display: none;">
-                <div class="dog">
-                    <div class="dog-ear left"></div><div class="dog-ear right"></div>
-                    <div class="dog-head">
-                        <div class="dog-spot"></div><div class="dog-eye left"></div><div class="dog-eye right"></div>
-                        <div class="dog-snout"><div class="dog-nose"></div><div class="dog-mouth"></div></div>
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title" style="margin-bottom: 2rem;">Preguntas frecuentes</h2>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué incluye el mantenimiento de 90€? <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Todo lo técnico. Incluye la renovación anual de tu dominio (.com o .es), el hosting de alta velocidad, certificado de seguridad SSL (el candado verde), copias de seguridad semanales y soporte técnico por si algo falla.</p>
                     </div>
-                    <div class="cv-paper"></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿La web será 100% mía? <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Por supuesto. A diferencia de otras agencias que te "alquilan" la web, en EneDigital tú eres el dueño absoluto de tu dominio y tus archivos desde el primer día.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Tengo que pagar algo más? <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No hay sorpresas. Solo pagas los 290€ + IVA una sola vez por el diseño, y luego la cuota de mantenimiento de 90€ una vez al año (el primer año ya está incluido o prorrateado según oferta). Sin mensualidades ocultas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Ya tengo dominio, ¿me sirve? <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>¡Claro! Si ya tienes un dominio comprado, lo redirigimos a nuestros servidores. Si no lo tienes, nosotros nos encargamos de todo el papeleo por ti.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="apps-lab" style="padding-bottom: 4rem; opacity: 0.8; margin-top: 4rem;">
+            <div class="container">
+                <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 2rem;">Laboratorio de Apps (Proyectos Personales)</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    
+                    <!-- App 1: Calculadora -->
+                    <article class="project-card" style="flex-direction: column; min-height: auto;">
+                        <div class="project-img" style="background: #E3F2FD; color: #1565C0; min-height: 140px; font-size: 3rem; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-calculator" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="project-info" style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0;">Calculadora</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.2rem;">Cálculos rápidos y precisos.</p>
+                            <a href="./apps/Sakura Calculadora/index.html" target="_blank" class="btn-app">ABRIR APP</a>
+                        </div>
+                    </article>
+
+                    <!-- App 2: Gestor Tareas -->
+                    <article class="project-card" style="flex-direction: column; min-height: auto;">
+                        <div class="project-img" style="background: #E8F5E9; color: #2E7D32; min-height: 140px; font-size: 3rem; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-list-check" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="project-info" style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0;">Mis Tareas</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.2rem;">Organiza tu día a día.</p>
+                            <a href="./apps/SakuraTasks/sakuratasks.html" target="_blank" class="btn-app">ABRIR APP</a>
+                        </div>
+                    </article>
+
+                    <!-- App 3: Clima -->
+                    <article class="project-card" style="flex-direction: column; min-height: auto;">
+                        <div class="project-img" style="background: #FFF3E0; color: #EF6C00; min-height: 140px; font-size: 3rem; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-cloud-sun" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="project-info" style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0;">App Clima</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.2rem;">El tiempo en directo.</p>
+                            <a href="./apps/Sakuraclima/index.html" target="_blank" class="btn-app">ABRIR APP</a>
+                        </div>
+                    </article>
+
+                    <!-- App 4: Horóscopo -->
+                    <article class="project-card" style="flex-direction: column; min-height: auto;">
+                        <div class="project-img" style="background: #F3E5F5; color: #8E24AA; min-height: 140px; font-size: 3rem; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-crystal-ball" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="project-info" style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0;">Horóscopo</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.2rem;">Tu predicción diaria.</p>
+                            <a href="./apps/Sakura Horoscopo/index.html" target="_blank" class="btn-app">ABRIR APP</a>
+                        </div>
+                    </article>
+
+                </div>
+                
+                <div style="text-align:center; margin-top:2rem;">
+                    <a href="https://github.com/NellysMata/nellysmata.github.io" target="_blank" style="color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid var(--text-secondary);">Ver código fuente en GitHub</a>
                 </div>
             </div>
-            <div class="thank-you-message" id="thankYouMessage">
-                <h3>¡Gracias por tu interés! 🐾</h3>
-                <p>El CV se está descargando...</p>
-                <button onclick="closeThankYouMessage()">Cerrar</button>
-            </div>
-        </section> 
+        </section>
     </main>
 
+    <div class="floating-container">
+        <div class="whatsapp-bubble" id="whatsapp-bot">
+            <div class="bubble-header">
+                <span style="font-weight: 800;">Nellys (EneDigital)</span>
+                <button onclick="closeBot()" style="background:none; border:none; color:#666; cursor:pointer;">✕</button>
+            </div>
+            <div class="bubble-body">
+                ¡Hola! 👋<br>¿Quieres que veamos cómo impulsar tu negocio hoy?
+            </div>
+            <div class="bubble-arrow"></div>
+        </div>
+        <a href="https://wa.me/34687356467" class="btn-float btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
     <footer>
-        <p>Diseñado y desarrollado con 💜 por Nellys Mata © 2025</p>
+        <p>© 2026 EneDigital · Nellys Mata · Vitoria-Gasteiz</p>
     </footer>
 
-    <script src="js/script.js" defer></script>
+    <script>
+        // --- LÓGICA MODO OSCURO ---
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = toggleBtn.querySelector('i');
+        const body = document.body;
+
+        // Comprobar preferencia guardada
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // --- LÓGICA FAQ (ACORDEÓN) ---
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const wasActive = question.classList.contains('active');
+                
+                // Cerrar todos
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+
+                // Abrir si no estaba activo
+                if (!wasActive) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+        // --- LÓGICA COMPARTIR ---
+        function sharePage(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("¡Mira esta web para digitalizar tu negocio en Vitoria! 🚀");
+            const linkedinUrl = "https://www.linkedin.com/sharing/share-offsite/?url=" + url;
+
+            if (platform === 'whatsapp') {
+                window.open("https://wa.me/?text=" + text + "%20" + url, '_blank');
+            } else if (platform === 'linkedin') {
+                window.open(linkedinUrl, '_blank');
+            } else if (platform === 'copy') {
+                navigator.clipboard.writeText(window.location.href);
+                alert("¡Enlace copiado al portapapeles!");
+            }
+        }
+
+        // --- BOT WHATSAPP SIMULADO ---
+        const botBubble = document.getElementById('whatsapp-bot');
+        
+        // Mostrar bot a los 4 segundos
+        setTimeout(() => {
+            botBubble.classList.add('show');
+            // Sonido de notificación opcional
+            // const audio = new Audio('notification.mp3'); audio.play(); 
+        }, 4000);
+
+        function closeBot() {
+            botBubble.classList.remove('show');
+        }
+    </script>
 </body>
 </html>
